@@ -17,7 +17,7 @@
                     <img class="img-circle" src="{{URL::asset('/images/personality-profiling.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
                     <h3>Personality Profiling</h3>
                      
-                    <p><a class="btn btn-default" href="#" role="button">Explore &raquo;</a>
+                    <p><a class="btn btn-default" href="{{url('/profiling')}}" role="button">Explore &raquo;</a>
                     </p>
                 </div>
                 
