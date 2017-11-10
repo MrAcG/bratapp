@@ -153,7 +153,25 @@ class big5submitController extends Controller
         }
 
     $big_personality->save();
-    return redirect('home');
+        $email = \Auth::user()->email;
+     $personality1 = \DB::table('big_personalities')
+                    ->where('email',$email)
+                    ->value('personality1');
+
+     $personality2 = \DB::table('big_personalities')
+                    ->where('email',$email)
+                    ->value('personality2');
+     $personality3 = \DB::table('big_personalities')
+                    ->where('email',$email)
+                    ->value('personality3'); 
+     $personality4 = \DB::table('big_personalities')
+                    ->where('email',$email)
+                    ->value('personality4');
+     $personality5 = \DB::table('big_personalities')
+                    ->where('email',$email)
+                    ->value('personality5');                
+
+    return view('test/big5result',['personalities'=>[$personality1,$personality2,$personality3,$personality4,$personality5]]);
 
     }
 

@@ -102,23 +102,99 @@ class hollandsubmitController extends Controller
      rsort($res);
      $res1=$res[0];
      $res2=$res[1];
+     $res3=$res[2];
 
-     if($R==$res1)       {$holland_personality->personality1 = 'REALISTIC';}
-     elseif ($I==$res1) {$holland_personality->personality1 = 'INVESTIGATIVE';}
-     elseif ($A==$res1) {$holland_personality->personality1 = 'ARTISTIC';}
-     elseif ($S==$res1) {$holland_personality->personality1 = 'SOCIAL';}
-     elseif ($E==$res1) {$holland_personality->personality1 = 'ENTERPRISING';}
-     elseif ($C==$res1) {$holland_personality->personality1 = 'CONVENTIONAL';}
+     if($R==$res1)       {$holland_personality->personality1 = 'R';}
+     elseif ($I==$res1) {$holland_personality->personality1 = 'I';}
+     elseif ($A==$res1) {$holland_personality->personality1 = 'A';}
+     elseif ($S==$res1) {$holland_personality->personality1 = 'S';}
+     elseif ($E==$res1) {$holland_personality->personality1 = 'E';}
+     elseif ($C==$res1) {$holland_personality->personality1 = 'C';}
 
-     if ($R==$res2)  {$holland_personality->personality2 = 'REALISTIC';}
-     elseif ($I==$res2) {$holland_personality->personality2 = 'INVESTIGATIVE';}
-     elseif ($A==$res2) {$holland_personality->personality2 = 'ARTISTIC';}
-     elseif ($S==$res2) {$holland_personality->personality2 = 'SOCIAL';}
-     elseif ($E==$res2) {$holland_personality->personality2 = 'ENTERPRISING';}
-     elseif ($C==$res2) {$holland_personality->personality2 = 'CONVENTIONAL';}
+     if ($R==$res2)  {$holland_personality->personality2 = 'R';}
+     elseif ($I==$res2) {$holland_personality->personality2 = 'I';}
+     elseif ($A==$res2) {$holland_personality->personality2 = 'A';}
+     elseif ($S==$res2) {$holland_personality->personality2 = 'S';}
+     elseif ($E==$res2) {$holland_personality->personality2 = 'E';}
+     elseif ($C==$res2) {$holland_personality->personality2 = 'C';}
+
+     if ($R==$res3)  {$holland_personality->personality3 = 'R';}
+     elseif ($I==$res3) {$holland_personality->personality3 = 'I';}
+     elseif ($A==$res3) {$holland_personality->personality3 = 'A';}
+     elseif ($S==$res3) {$holland_personality->personality3 = 'S';}
+     elseif ($E==$res3) {$holland_personality->personality3 = 'E';}
+     elseif ($C==$res3) {$holland_personality->personality3 = 'C';}
      
     $holland_personality->save();
-    return redirect('home');
+
+    $email = \Auth::user()->email;
+     $personality1 = \DB::table('holland_personalities')
+                    ->where('email',$email)
+                    ->value('personality1');
+
+     $personality2 = \DB::table('holland_personalities')
+                    ->where('email',$email)
+                    ->value('personality2');
+     $personality3 = \DB::table('holland_personalities')
+                    ->where('email',$email)
+                    ->value('personality3');               
+               
+
+     if ($personality1=='R') {
+         $personality1='Realistic';
+     }
+     elseif ($personality1=='I') {
+         $personality1='Investigative';
+     }
+      elseif ($personality1=='A') {
+         $personality1='Artistic';
+     }
+      elseif ($personality1=='S') {
+         $personality1='Social';
+     }
+      elseif ($personality1=='E') {
+         $personality1='Enterprising';
+     } elseif ($personality1=='C') {
+         $personality1='Conventional';
+     }
+
+     if ($personality2=='R') {
+         $personality2='Realistic';
+     }
+     elseif ($personality2=='I') {
+         $personality2='Investigative';
+     }
+      elseif ($personality2=='A') {
+         $personality2='Artistic';
+     }
+      elseif ($personality2=='S') {
+         $personality2='Social';
+     }
+      elseif ($personality2=='E') {
+         $personality2='Enterprising';
+     } elseif ($personality2=='C') {
+         $personality2='Conventional';
+     }
+
+     if ($personality3=='R') {
+         $personality3='Realistic';
+     }
+     elseif ($personality3=='I') {
+         $personality3='Investigative';
+     }
+      elseif ($personality3=='A') {
+         $personality3='Artistic';
+     }
+      elseif ($personality3=='S') {
+         $personality3='Social';
+     }
+      elseif ($personality3=='E') {
+         $personality3='Enterprising';
+     } elseif ($personality3=='C') {
+         $personality3='Conventional';
+     }
+
+       return view('test/hollandresult',['personalities'=>[$personality1,$personality2,$personality3]]);
     }
 
     /**

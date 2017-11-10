@@ -18,6 +18,7 @@ class HollandPersonalities extends Migration
             $table->string('email');
             $table->string('personality1')->nullable();
             $table->string('personality2')->nullable();
+            $table->string('personality3')->nullable();
             $table->timestamps();
         });
     }

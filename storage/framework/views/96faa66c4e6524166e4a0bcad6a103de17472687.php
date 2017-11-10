@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Build The Talent
+                    Brand The Talent
                 </div>
             </div>
         </div>

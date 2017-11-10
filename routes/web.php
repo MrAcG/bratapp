@@ -23,4 +23,5 @@ Route::get('/big5test','big5testController@index');
 Route::get('/hollandtest','hollandController@index');
 Route::resource('/hollandsubmit','hollandsubmitController');
 Route::resource('/big5submit','big5submitController');
+Route::resource('/jobs','jobsController');
 
