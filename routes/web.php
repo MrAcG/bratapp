@@ -21,6 +21,8 @@ Route::get('/home', 'HomeController@index');
 Route::get('/profiling','profilingController@index');
 Route::get('/big5test','big5testController@index');
 Route::get('/hollandtest','hollandController@index');
+Route::get('/softskills','softskillsController@index');
+
 Route::resource('/hollandsubmit','hollandsubmitController');
 Route::resource('/big5submit','big5submitController');
 Route::resource('/jobs','jobsController');
