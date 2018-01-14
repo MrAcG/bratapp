@@ -15,11 +15,10 @@
 
 <center>
 <div class="w3-content w3-section" style="max-width:500px">
-  <img class="mySlides w3-animate-fading" src="{{URL::asset('/images/ld1.jpeg')}}" style="width:100%">
-  <img class="mySlides w3-animate-fading" src="{{URL::asset('/images/ld2.jpeg')}}" style="width:100%">
-  <img class="mySlides w3-animate-fading" src="{{URL::asset('/images/ld3.jpeg')}}" style="width:100%">
-  <img class="mySlides w3-animate-fading" src="{{URL::asset('/images/ld4.jpeg')}}" style="width:100%">
-  <img class="mySlides w3-animate-fading" src="{{URL::asset('/images/ld5.jpeg')}}" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="{{URL::asset('/images/tm1.jpg')}}" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="{{URL::asset('/images/tm2.jpg')}}" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="{{URL::asset('/images/tm3.jpg')}}" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="{{URL::asset('/images/tm4.jpg')}}" style="width:100%">
 </div>
 
 <script>
