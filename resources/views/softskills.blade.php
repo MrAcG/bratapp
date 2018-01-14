@@ -39,7 +39,7 @@
                     <img class="img-circle" src="{{URL::asset('/images/verbal.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
                     <h3>Communication Skills</h3>
                      
-                    <p><a class="btn btn-default" href="#" role="button">Explore &raquo;</a>
+                    <p><a class="btn btn-default" href="{{url('/comms')}}" role="button">Explore &raquo;</a>
                     </p>
                 </div>
                 
