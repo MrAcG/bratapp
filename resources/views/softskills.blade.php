@@ -47,7 +47,7 @@
                     <img class="img-circle"   src="{{URL::asset('/images/analytics.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
                     <h3>Change Management</h3>
                      
-                    <p><a class="btn btn-default" href="/jobs" role="button">Explore &raquo;</a>
+                    <p><a class="btn btn-default" href="{{url('/change')}}" role="button">Explore &raquo;</a>
                     </p>
                 </div>
                 <!-- /.col-lg-4 -->
