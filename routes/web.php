@@ -24,6 +24,7 @@ Route::get('/hollandtest','hollandController@index');
 Route::get('/softskills','softskillsController@index');
 Route::get('/leader','leaderController@index');
 Route::get('/time','timeController@index');
+Route::get('/stress','stressController@index');
 
 
 Route::resource('/hollandsubmit','hollandsubmitController');

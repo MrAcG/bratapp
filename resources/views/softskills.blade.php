@@ -31,7 +31,7 @@
                     <img class="img-circle"  src="{{URL::asset('/images/logical.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
                     <h3>Stress Management</h3>
                      
-                    <p><a class="btn btn-default" href="#"  role="button">Explore &raquo;</a>
+                    <p><a class="btn btn-default" href="{{url('/stress')}}"  role="button">Explore &raquo;</a>
                     </p>
                 </div>
                 <!-- /.col-lg-4 -->
