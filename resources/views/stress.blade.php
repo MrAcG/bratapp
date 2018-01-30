@@ -88,7 +88,7 @@ Life is something which no one can explain or understand but everyone can enjoy 
   
 </p>
 
-<p align="center"><a class="btn btn-default" href="{{url('/select')}}" role="button">Take The Test</a>
+<p align="center"><a class="btn btn-default" href="{{url('/select2')}}" role="button">Take The Test</a>
 </p>
             </div>
             </div>
