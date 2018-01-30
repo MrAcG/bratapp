@@ -67,8 +67,12 @@ In the transformational leadership model, leaders set direction and help themsel
 <br>
 Effective leadership is about all of this – and it's exciting to be part of this journey!</h5>
 </p>
+<p align="center"><a class="btn btn-default" href="{{url('/select')}}" role="button">Take The Test</a>
+</p>  
             </div>
             </div>
+
+
             <!-- /.row -->
             <!-- Three columns of Tests -->
             <!-- /.row -->
