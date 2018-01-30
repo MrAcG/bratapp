@@ -107,6 +107,9 @@ Things which fall in 1st and 2nd quad may be difficult but with good planning ca
 <br>Success is a habit. Though it is any dream, it can be accessed through certain set of habits. Habit is something which we do on regular basis consciously or unconsciously. It is uncomfortable for us not to practice our daily routine. What could be more splendid than revising our habits to work for us and towards our targets? There are bad and good habits. If you need to change one of our habits we just need to practice something else for certain time that it is stored in our unconscious mind just like brushing the teeth or checking phone.  We can cast a habit or eradicate in simple practice and consistency. Creating habits like planning, reading, making time for self, and improving consciousness could result in better time management. 
 Its a habit to be early or on time, to plan for things and to work for it. To dream or to be successful or be triamphous, all of it is a habit. 
 </p>
+
+<p align="center"><a class="btn btn-default" href="{{url('/select')}}" role="button">Take The Test</a>
+</p>
             </div>
             </div>
             <!-- /.row -->
