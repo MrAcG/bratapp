@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\leadertest;
+use App\timetest;
 
-class leadertestSubmitController extends Controller
+class timetestSubmitController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -36,8 +36,7 @@ class leadertestSubmitController extends Controller
      */
     public function store(Request $request)
     {
-        //
-            $leader_test = new leadertest;
+        $time_test = new timetest;
             $op1=$request->op1;
             $op2=$request->op2;
             $op3=$request->op3;
@@ -53,20 +52,13 @@ class leadertestSubmitController extends Controller
             $op13=$request->op13;
             $op14=$request->op14;
             $op15=$request->op15;
-            $op16=$request->op16;
-            $op17=$request->op17;
 
+            $result=$op1+$op2+$op3+$op4+$op5+$op6+$op7+$op8+$op9+$op10+$op11+$op12+$op13+$op14+$op15;
+            $time_test->email= \Auth::user()->email;
+            $time_test->score= $result;
 
-            $result=$op1+$op2+$op3+$op4+$op5+$op6+$op7+$op8+$op9+$op10+$op11+$op12+$op13+$op14+$op15+$op16+$op17;
-
-            $leader_test->email= \Auth::user()->email;
-            $leader_test->score= $result;
-
-            $leader_test->save();
+            $time_test->save();
             return $result;
-
-
-
     }
 
     /**

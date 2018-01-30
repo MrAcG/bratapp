@@ -29,8 +29,10 @@ Route::get('/comms','commsController@index');
 Route::get('/change','changeController@index');
 Route::get('/select','selectController@index');
 Route::get('/leadertest','leaderTestController@index');
+Route::get('/select1','select1Controller@index');
+Route::get('/timetest','timetestController@index');
 
-
+Route::resource('/timetestSubmit','timetestSubmitController');
 Route::resource('/leadertestSubmit','leadertestSubmitController');
 Route::resource('/hollandsubmit','hollandsubmitController');
 Route::resource('/big5submit','big5submitController');

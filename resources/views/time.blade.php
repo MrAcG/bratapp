@@ -108,7 +108,7 @@ Things which fall in 1st and 2nd quad may be difficult but with good planning ca
 Its a habit to be early or on time, to plan for things and to work for it. To dream or to be successful or be triamphous, all of it is a habit. 
 </p>
 
-<p align="center"><a class="btn btn-default" href="{{url('/select')}}" role="button">Take The Test</a>
+<p align="center"><a class="btn btn-default" href="{{url('/select1')}}" role="button">Take The Test</a>
 </p>
             </div>
             </div>
