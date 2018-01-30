@@ -23,7 +23,7 @@
   </ul>
 
 
-<p align="center" style="position:relative"><a class="btn btn-default" href="{{url('/select')}}" role="button">Start The Test</a>
+<p align="center" style="position:relative"><a class="btn btn-default" href="{{url('/leadertest')}}" role="button">Start The Test</a>
 </p>
             </div>
             </div>

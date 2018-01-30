@@ -28,6 +28,7 @@ Route::get('/stress','stressController@index');
 Route::get('/comms','commsController@index');
 Route::get('/change','changeController@index');
 Route::get('/select','selectController@index');
+Route::get('/leadertest','leaderTestController@index');
 
 
 Route::resource('/hollandsubmit','hollandsubmitController');
