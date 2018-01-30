@@ -9,5 +9,31 @@
 
      <div class="panel panel-primary">
         <div class="panel-heading">
-            <h2 class="panel-title" align="center">Time Management</h2>
+            <h2 class="panel-title" align="center">Leadership Test</h2>
         </div>
+        <div class="panel-body"> 
+
+		
+
+
+  <ul style="list-style:none;position: relative" align="center">
+<img class="img-square" src="{{URL::asset('/images/test.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+<li>Total Questions:17
+<li>Total Duration:15 mins
+  </ul>
+
+
+<p align="center" style="position:relative"><a class="btn btn-default" href="{{url('/select')}}" role="button">Start The Test</a>
+</p>
+            </div>
+            </div>
+            <!-- /.row -->
+            <!-- Three columns of Tests -->
+            <!-- /.row -->
+        <!--</div>
+    </div>
+</center>
+        </div>
+    </div>
+</div>
+@endsection

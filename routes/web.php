@@ -27,6 +27,7 @@ Route::get('/time','timeController@index');
 Route::get('/stress','stressController@index');
 Route::get('/comms','commsController@index');
 Route::get('/change','changeController@index');
+Route::get('/select','selectController@index');
 
 
 Route::resource('/hollandsubmit','hollandsubmitController');
