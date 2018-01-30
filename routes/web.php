@@ -27,6 +27,13 @@ Route::get('/time','timeController@index');
 Route::get('/stress','stressController@index');
 Route::get('/comms','commsController@index');
 Route::get('/change','changeController@index');
+Route::get('/selfdev','selfdevController@index');
+Route::get('/schedule','scheduleController@index');
+Route::get('/logs','logsController@index');
+Route::get('/progbar','progbarController@index');
+Route::get('/statusupdate','statusupdateController@index');
+Route::get('/evidence','evidenceController@index');
+
 
 
 Route::resource('/hollandsubmit','hollandsubmitController');

@@ -54,7 +54,7 @@
                     <img class="img-circle"  src="{{URL::asset('/images/self-development-plan.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
                     <h3>Self Development Plan</h3>
                      
-                    <p><a class="btn btn-default" href="#"  role="button">Explore &raquo;</a>
+                    <p><a class="btn btn-default" href="{{url('/selfdev')}}"  role="button">Explore &raquo;</a>
                     </p>
                 </div>
                 <!-- /.col-lg-4 -->
