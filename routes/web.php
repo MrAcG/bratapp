@@ -31,10 +31,15 @@ Route::get('/select','selectController@index');
 Route::get('/leadertest','leaderTestController@index');
 Route::get('/select1','select1Controller@index');
 Route::get('/select2','select2Controller@index');
+Route::get('/select3','select3Controller@index');
+Route::get('/select4','select4Controller@index');
 Route::get('/stresstest','stresstestController@index');
-Route::get('/timetest','timetestController@index');
+Route::get('/commstest','commstestController@index');
+Route::get('/changetest','changetestController@index');
 
 Route::resource('/timetestSubmit','timetestSubmitController');
+Route::resource('/commstestSubmit','commstestSubmitController');
+Route::resource('/changetestSubmit','changetestSubmitController');
 Route::resource('/stresstestSubmit','stresstestSubmitController');
 Route::resource('/leadertestSubmit','leadertestSubmitController');
 Route::resource('/hollandsubmit','hollandsubmitController');

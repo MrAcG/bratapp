@@ -78,7 +78,7 @@ All of us communicate every day. The better we communicate, the more credibility
 Use the 7 Cs of Communication as a checklist for all of your communication. By doing this, you'll stay clear, concise, concrete, correct, coherent, complete, and courteous.<br>  
 </h5></p>
 
-<p align="center"><a class="btn btn-default" href="{{url('/select')}}" role="button">Take The Test</a>
+<p align="center"><a class="btn btn-default" href="{{url('/select3')}}" role="button">Take The Test</a>
 </p>
             </div>
             </div>
