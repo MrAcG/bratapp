@@ -105,7 +105,7 @@ Change management is a broad discipline that involves ensuring change is impleme
 As a change manager, your role is to ease the journey towards new ways of working, and you'll need a set of tools to help you along the way: There's a wide range of change management tools here at Mind Tools – this a great place to start!
 </h5></p>
 
-<p align="center"><a class="btn btn-default" href="{{url('/select')}}" role="button">Take The Test</a>
+<p align="center"><a class="btn btn-default" href="{{url('/select4')}}" role="button">Take The Test</a>
 </p>
             </div>
             </div>

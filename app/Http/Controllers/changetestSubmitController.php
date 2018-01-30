@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\changetest;
 
 class changetestSubmitController extends Controller
 {
@@ -35,7 +36,30 @@ class changetestSubmitController extends Controller
      */
     public function store(Request $request)
     {
-        //
+            $change_test = new changetest;
+            $op1=$request->op1;
+            $op2=$request->op2;
+            $op3=$request->op3;
+            $op4=$request->op4;
+            $op5=$request->op5;
+            $op6=$request->op6;
+            $op7=$request->op7;
+            $op8=$request->op8;
+            $op9=$request->op9;
+            $op10=$request->op10;
+            $op11=$request->op11;
+            $op12=$request->op12;
+            $op13=$request->op13;
+            $op14=$request->op14;
+            $op15=$request->op15;
+            $op16=$request->op16;
+
+            $result=$op1+$op2+$op3+$op4+$op5+$op6+$op7+$op8+$op9+$op10+$op11+$op12+$op13+$op14+$op15+$op16;
+            $change_test->email= \Auth::user()->email;
+            $change_test->score= $result;
+
+            $change_test->save();
+            return $result;
     }
 
     /**

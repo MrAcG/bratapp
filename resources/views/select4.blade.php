@@ -18,8 +18,8 @@
 
   <ul style="list-style:none;position: relative" align="center">
 <img class="img-square" src="{{URL::asset('/images/test.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-<li>Total Questions:12
-<li>Total Duration:15 mins
+<li>Total Questions:16
+<li>Total Duration:20 mins
   </ul>
 
 
