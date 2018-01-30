@@ -59,10 +59,10 @@ class leadertestSubmitController extends Controller
 
             $result=$op1+$op2+$op3+$op4+$op5+$op6+$op7+$op8+$op9+$op10+$op11+$op12+$op13+$op14+$op15+$op16+$op17;
 
-            $leadertest->email= \Auth::user()->email;
-            $leadertest->score= $result;
+            $leader_test->email= \Auth::user()->email;
+            $leader_test->score= $result;
 
-            $leadertest->save();
+            $leader_test->save();
 
 
 
