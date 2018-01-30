@@ -31,6 +31,7 @@ Route::get('/select','selectController@index');
 Route::get('/leadertest','leaderTestController@index');
 
 
+Route::resource('/leadertestSubmit','leadertestSubmitController');
 Route::resource('/hollandsubmit','hollandsubmitController');
 Route::resource('/big5submit','big5submitController');
 Route::resource('/jobs','jobsController');
