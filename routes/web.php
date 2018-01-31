@@ -51,6 +51,7 @@ Route::get('/select4','select4Controller@index');
 Route::get('/stresstest','stresstestController@index');
 Route::get('/commstest','commstestController@index');
 Route::get('/changetest','changetestController@index');
+Route::get('/timetest','timetestController@index');
 
 
 Route::resource('/timetestSubmit','timetestSubmitController');
