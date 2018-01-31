@@ -10,7 +10,12 @@ class manschedulesController extends Controller
 {
     public function home()
     {
-    	$schedules = Schedule::all();
+    	
+    	$currentDate = date('Y-m-d');
+		$schedules = Schedule::where('enddate', '>=', $currentDate)->get();		
+    	
+    	
     	return view('manschedule',['schedules'=>$schedules]);
+
     }
 }

@@ -49,7 +49,7 @@
                             <img class="img-circle"   src="{{URL::asset('/images/technical.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
                             <h3>Revive<br>Goal</h3>
                              
-                            <p><a class="btn btn-default" href="#" role="button">Explore &raquo;</a>
+                            <p><a class="btn btn-default" href="{{url('/logs')}}" role="button">Explore &raquo;</a>
                             </p>
                         </div>
                         <!-- /.col-lg-4 -->
@@ -58,7 +58,7 @@
                             <img class="img-circle" src="{{URL::asset('/images/judgement.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
                             <h3>Goal Evaluation</h3>
                              
-                            <p><a class="btn btn-default" href="#" role="button">Explore &raquo;</a>
+                            <p><a class="btn btn-default" href="{{url('/progbar')}}" role="button">Explore &raquo;</a>
                             </p>
                         </div>
                         

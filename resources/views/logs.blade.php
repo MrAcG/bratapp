@@ -37,7 +37,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <legend>Your Schedules</legend>
+            <legend>Your Past Schedules</legend>
             @if(session('info'))
                 <div class="alert alert-success">
                     {{session('info')}}

@@ -12,15 +12,11 @@
         </div>
         <div class="panel-body">            
             <div class="row">
-             <div class="col-lg-4">
-                    <img class="img-circle" src="{{URL::asset('/images/e-portfolio.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-                    <h3>Manage Schedule</h3>
-                     
-                    <p><a class="btn btn-default" href="{{url('/schedule')}}" role="button">Explore &raquo;</a>
-                    </p>
-                </div>
-                
-                
+                <legend>Status Update</legend>
+                <h3>Do You Want To Update Your Weekly Status?</h3>
+                <a href="{{url('/selfdev')}}" class="btn btn-danger">NO</a>
+                <a href="{{url('/manschedule')}}" class="btn btn-primary">YES</a>
+
             </div>
             </div>
             </div>

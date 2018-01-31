@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Schedule;
 use Illuminate\Http\Request;
 
 class progbarController extends Controller
@@ -14,6 +14,12 @@ class progbarController extends Controller
     //
     public function index()
     {
-        return view('progbar');
+       
+       	$currentDate = date('Y-m-d');
+		$schedules = Schedule::where('enddate', '>=', $currentDate)->get();	
+    	
+    	
+    	return view('progbar',['schedules'=>$schedules]);
+
     }
 }
