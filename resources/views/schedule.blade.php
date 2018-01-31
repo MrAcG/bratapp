@@ -16,32 +16,17 @@
                     <img class="img-circle" src="{{URL::asset('/images/e-portfolio.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
                     <h3>Add New Schedule</h3>
                      
-                    <p><a class="btn btn-default" href="#" role="button">Explore &raquo;</a>
+                    <p><a class="btn btn-default" href="{{url('/addschedule')}}" role="button">Explore &raquo;</a>
                     </p>
                 </div>
                 <div class="col-lg-4">
                     <img class="img-circle"  src="{{URL::asset('/images/tests.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-                    <h3>View Schedules</h3>
+                    <h3>Manage Schedules</h3>
                      
-                    <p><a class="btn btn-default" href="#" role="button">Explore &raquo;</a>
+                    <p><a class="btn btn-default" href="{{url('/manschedule')}}" role="button">Explore &raquo;</a>
                     </p>
                 </div>
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <img class="img-circle"  src="{{URL::asset('/images/logical.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-                    <h3>Edit Schedule</h3>
-                     
-                    <p><a class="btn btn-default" href="#"  role="button">Explore &raquo;</a>
-                    </p>
-                </div>
-                <!-- /.col-lg-4 -->
-                 <div class="col-lg-4">
-                    <img class="img-circle" src="{{URL::asset('/images/verbal.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-                    <h3>Delete Schedule</h3>
-                     
-                    <p><a class="btn btn-default" href="#" role="button">Explore &raquo;</a>
-                    </p>
-                </div>
+                
                 
                 
                 

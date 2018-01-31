@@ -34,7 +34,13 @@ Route::get('/logs','logsController@index');
 Route::get('/progbar','progbarController@index');
 Route::get('/statusupdate','statusupdateController@index');
 Route::get('/evidence','evidenceController@index');
-
+Route::get('/manschedule','manschedulesController@home');
+Route::get('/addschedule','addschedulesController@index');
+Route::POST('/insertsched','addschedulesController@add');
+Route::get('/update/{id}','addschedulesController@update');
+Route::post('/edit/{id}','addschedulesController@edit');
+Route::get('/read/{id}','addschedulesController@read');
+Route::get('/delete/{id}','addschedulesController@delete');
 
 Route::get('/select','selectController@index');
 Route::get('/leadertest','leaderTestController@index');

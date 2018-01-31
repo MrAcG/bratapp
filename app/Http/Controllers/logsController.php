@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Schedule;
 
 class logsController extends Controller
 {
@@ -14,6 +15,9 @@ class logsController extends Controller
     //
     public function index()
     {
-        return view('logs');
+       
+    	$currentDate = date('Y-m-d');
+		$schedules = Schedule::where('enddate', '<=', $currentDate)->get();		
+    	return view('logs',['schedules'=>$schedules]);
     }
 }

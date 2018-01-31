@@ -12,6 +12,9 @@
 
     <!-- Styles -->
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="<?php echo e(asset('css/bootstrap.css')); ?>">
+    <script type="text/javascript" src="<?php echo e(asset('/js/jquery.js')); ?>"></script>-->
+    <!-- <script type="text/javascript" src="<?php echo e(asset('/js/bootstrap.min.js')); ?>"></script> -->
 </head>
 <body>
     <div id="app">
