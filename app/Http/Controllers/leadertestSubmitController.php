@@ -63,7 +63,7 @@ class leadertestSubmitController extends Controller
             $leader_test->score= $result;
 
             $leader_test->save();
-            return $result;
+            return view('leaderresult',['result'=>[$result]]);
 
 
 
