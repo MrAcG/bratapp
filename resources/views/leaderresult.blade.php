@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <div class="container">
                           
                               <h2 class="text-center"><span class="page-heading">Leader Test Results:</span></h2>
@@ -19,15 +19,25 @@
                                              
                                               
                                        <div  style="font-size:30px;" class="col-sm-12 animateFadeIUp ">
-                                           @foreach($result as $result)
+                                           <div class="w3-padding-32 w3-green w3-circle w3-center">
+                                            @foreach($result as $result)
                                             {{ $result }}/85
                                            @endforeach
+                                          </div>
+                              
+                                          <div class="panel panel-default">
+                                          <center>
+                                            <div class="panel-body">
+                                             <div class="row">
 
-                                            <p align="center"><a class="btn btn-default" href="{{url('/allresult')}}" role="button">Compare with Previous Results</a>
-                                            </p>
-                                          
+
+                                          <h1 style="font-size:15px;">Result Graph</h1>
 
                                           </div>
+                                          </div>
+                                            </div>
+                                            </center>
+                                            </div>
                                           
                                           
                                           </div>
