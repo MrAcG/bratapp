@@ -58,7 +58,7 @@ class commstestSubmitController extends Controller
             $comms_test->score= $result;
 
             $comms_test->save();
-            return $result;
+            return view('commsresult',['result'=>[$result]]);
     }
 
     /**

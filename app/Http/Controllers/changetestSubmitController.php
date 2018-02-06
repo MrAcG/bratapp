@@ -59,7 +59,7 @@ class changetestSubmitController extends Controller
             $change_test->score= $result;
 
             $change_test->save();
-            return $result;
+            return view('changeresult',['result'=>[$result]]);
     }
 
     /**

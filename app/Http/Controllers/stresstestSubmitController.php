@@ -55,7 +55,7 @@ class stresstestSubmitController extends Controller
             $stress_test->score= $result;
 
             $stress_test->save();
-            return $result;
+            return view('stressresult',['result'=>[$result]]);
 
     }
 

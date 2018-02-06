@@ -58,7 +58,7 @@ class timetestSubmitController extends Controller
             $time_test->score= $result;
 
             $time_test->save();
-            return $result;
+            return view('timeresult',['result'=>[$result]]);
     }
 
     /**
