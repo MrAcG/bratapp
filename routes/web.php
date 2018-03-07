@@ -18,6 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/verbal', 'verbalController@index');
+Route::get('/quanti', 'quantiController@index');
+Route::get('/aptitude', 'aptiController@index');
 Route::get('/profiling','profilingController@index');
 Route::get('/big5test','big5testController@index');
 Route::get('/hollandtest','hollandController@index');
@@ -52,13 +55,17 @@ Route::get('/stresstest','stresstestController@index');
 Route::get('/commstest','commstestController@index');
 Route::get('/changetest','changetestController@index');
 Route::get('/timetest','timetestController@index');
+Route::get('/quantitest','quantitestController@index');
+Route::get('/verbaltest','verbaltestController@index');
 
 
 Route::resource('/timetestSubmit','timetestSubmitController');
 Route::resource('/commstestSubmit','commstestSubmitController');
 Route::resource('/changetestSubmit','changetestSubmitController');
 Route::resource('/stresstestSubmit','stresstestSubmitController');
+Route::resource('/quantitestSubmit','quantitestSubmitController');
 Route::resource('/leadertestSubmit','leadertestSubmitController');
+Route::resource('/verbaltestSubmit','verbaltestSubmitController');
 Route::resource('/hollandsubmit','hollandsubmitController');
 Route::resource('/big5submit','big5submitController');
 Route::resource('/jobs','jobsController');
