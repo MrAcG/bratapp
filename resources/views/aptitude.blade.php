@@ -26,6 +26,29 @@
                     <p><a class="btn btn-default" href="{{url('/verbal')}}" role="button">Take The Test &raquo;</a>
                     </p>
                 </div>
+                <div class="col-lg-4">
+                    <img class="img-circle"  src="{{URL::asset('/images/coding.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+                    <h3>Coding Decoding</h3>
+                     
+                    <p><a class="btn btn-default" href="{{url('/code')}}" role="button">Take The Test &raquo;</a>
+                    </p>
+                </div>
+                <div class="col-lg-7">
+                    <img class="img-circle"  src="{{URL::asset('/images/technical.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+                    <h3>Technical Test</h3>
+                     
+                    <p><a class="btn btn-default" href="{{url('/technical')}}" role="button">Take The Test &raquo;</a>
+                    </p>
+                </div>
+                <div class="col-lg-3">
+                    <img class="img-circle"  src="{{URL::asset('/images/logical.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+                    <h3>Logical Reasoning</h3>
+                     
+                    <p><a class="btn btn-default" href="{{url('/logic')}}" role="button">Take The Test &raquo;</a>
+                    </p>
+                </div>
+            
+
                 <!-- /.col-lg-4 -->
                 <!-- <div class="col-lg-4">
                     <img class="img-circle"  src="{{URL::asset('/images/analytics.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
