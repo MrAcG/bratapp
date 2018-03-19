@@ -33,6 +33,9 @@ Route::get('/time','timeController@index');
 Route::get('/stress','stressController@index');
 Route::get('/comms','commsController@index');
 Route::get('/change','changeController@index');
+Route::get('/resume', function () {
+    return file_get_contents(public_path().'/resume.html'); 
+});
 
 Route::get('/selfdev','selfdevController@index');
 Route::get('/schedule','scheduleController@index');

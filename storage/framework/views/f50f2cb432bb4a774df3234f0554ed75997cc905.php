@@ -12,7 +12,7 @@
         <div class="panel-body"> 
 
 <center>
-<div class="w3-content w3-section" style="max-width:500px">
+<!-- <div class="w3-content w3-section" style="max-width:500px">
   <img class="mySlides w3-animate-fading" src="<?php echo e(URL::asset('/images/tm1.jpg')); ?>" style="width:100%">
   <img class="mySlides w3-animate-fading" src="<?php echo e(URL::asset('/images/tm2.jpg')); ?>" style="width:100%">
   <img class="mySlides w3-animate-fading" src="<?php echo e(URL::asset('/images/tm3.jpg')); ?>" style="width:100%">
@@ -34,7 +34,7 @@ function carousel() {
     x[myIndex-1].style.display = "block";  
     setTimeout(carousel, 9000);    
 }
-</script>
+</script> -->
 
 </center>		
 <h2><b>Introduction:</b></h2>
@@ -85,7 +85,9 @@ Following are some of the strategies we must follow to grow in stressful world a
 Life is something which no one can explain or understand but everyone can enjoy things they like to do within it. Grow, expand make our name and fame, earn a lot of money but have fun doing that. Don’t fall for the rat race or dog fight, ignore the nonsense with maturity and be a greater person at heart. Help others and love everyone. 
   
 </p>
-            
+
+<p align="center"><a class="btn btn-default" href="<?php echo e(url('/select2')); ?>" role="button">Take The Test</a>
+</p>
             </div>
             </div>
             <!-- /.row -->

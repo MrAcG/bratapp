@@ -22,6 +22,7 @@
                                             <li><?php echo e($jobs->get($i)); ?></li>
 
                                             </ul>
+                                            
                                              
                                               
                                           </div>

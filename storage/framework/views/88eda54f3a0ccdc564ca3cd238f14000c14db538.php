@@ -75,7 +75,9 @@ Following are some of the strategies we must follow to grow in stressful world a
 All of us communicate every day. The better we communicate, the more credibility we'll have with our clients, our boss, and our colleagues.<br>
 Use the 7 Cs of Communication as a checklist for all of your communication. By doing this, you'll stay clear, concise, concrete, correct, coherent, complete, and courteous.<br>  
 </h5></p>
-            
+
+<p align="center"><a class="btn btn-default" href="<?php echo e(url('/select3')); ?>" role="button">Take The Test</a>
+</p>
             </div>
             </div>
             <!-- /.row -->

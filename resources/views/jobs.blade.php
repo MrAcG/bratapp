@@ -24,6 +24,7 @@
                                             <li>{{ $jobs->get($i) }}</li>
 
                                             </ul>
+                                            
                                              
                                               
                                           </div>
