@@ -37,7 +37,7 @@
                     <img class="img-circle" src="<?php echo e(URL::asset('/images/subjects-brand.png')); ?>" alt="Generic placeholder image" style="width: 140px; height: 140px;">
                     <h3>Subjects</h3>
                      
-                    <p><a class="btn btn-default" href="#" role="button">Explore &raquo;</a>
+                    <p><a class="btn btn-default" href="<?php echo e(url('/subject')); ?>" role="button">Explore &raquo;</a>
                     </p>
                 </div>
                 <div class="col-lg-4">

@@ -66,6 +66,7 @@ Route::get('/verbaltest','verbaltestController@index');
 Route::get('/codetest', 'codetestController@index');
 Route::get('/logictest', 'logictestController@index');
 Route::get('/technicaltest', 'technicaltestController@index');
+Route::get('/subject', 'subjectController@index');
 
 Route::resource('/timetestSubmit','timetestSubmitController');
 Route::resource('/commstestSubmit','commstestSubmitController');
