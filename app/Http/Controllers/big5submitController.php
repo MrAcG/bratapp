@@ -151,7 +151,7 @@ class big5submitController extends Controller
         else{
             $big_personality->personality5 =  'CURIOUS';
         }
-
+    //taking only last entry of many test results
     $big_personality->save();
         $email = \Auth::user()->email;
      $personality1 = \DB::table('big_personalities')
