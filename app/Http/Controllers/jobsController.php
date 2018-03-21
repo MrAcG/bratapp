@@ -25,10 +25,12 @@ class jobsController extends Controller
      $email = \Auth::user()->email;
      $personality1 = \DB::table('holland_personalities')
      ->where('email',$email)
+     ->orderBy('updated_at','desc')
      ->pluck('personality1');
 
       $personality2 = \DB::table('holland_personalities')
      ->where('email',$email)
+     ->orderBy('updated_at','desc')
      ->pluck('personality2');
 
      $jobs = \DB::table('jobs')

@@ -104,39 +104,44 @@ class hollandsubmitController extends Controller
      $res2=$res[1];
      $res3=$res[2];
 
-     if($R==$res1)       {$holland_personality->personality1 = 'R';}
-     elseif ($I==$res1) {$holland_personality->personality1 = 'I';}
-     elseif ($A==$res1) {$holland_personality->personality1 = 'A';}
-     elseif ($S==$res1) {$holland_personality->personality1 = 'S';}
-     elseif ($E==$res1) {$holland_personality->personality1 = 'E';}
-     elseif ($C==$res1) {$holland_personality->personality1 = 'C';}
+     if($R==$res1)      {$res4 = 'R';}
+     elseif ($I==$res1) {$res4 = 'I';}
+     elseif ($A==$res1) {$res4 = 'A';}
+     elseif ($S==$res1) {$res4 = 'S';}
+     elseif ($E==$res1) {$res4 = 'E';}
+     elseif ($C==$res1) {$res4 = 'C';}
 
-     if ($R==$res2)  {$holland_personality->personality2 = 'R';}
-     elseif ($I==$res2) {$holland_personality->personality2 = 'I';}
-     elseif ($A==$res2) {$holland_personality->personality2 = 'A';}
-     elseif ($S==$res2) {$holland_personality->personality2 = 'S';}
-     elseif ($E==$res2) {$holland_personality->personality2 = 'E';}
-     elseif ($C==$res2) {$holland_personality->personality2 = 'C';}
+     if ($R==$res2)     {$res5 = 'R';}
+     elseif ($I==$res2) {$res5 = 'I';}
+     elseif ($A==$res2) {$res5 = 'A';}
+     elseif ($S==$res2) {$res5 = 'S';}
+     elseif ($E==$res2) {$res5 = 'E';}
+     elseif ($C==$res2) {$res5 = 'C';}
 
-     if ($R==$res3)  {$holland_personality->personality3 = 'R';}
-     elseif ($I==$res3) {$holland_personality->personality3 = 'I';}
-     elseif ($A==$res3) {$holland_personality->personality3 = 'A';}
-     elseif ($S==$res3) {$holland_personality->personality3 = 'S';}
-     elseif ($E==$res3) {$holland_personality->personality3 = 'E';}
-     elseif ($C==$res3) {$holland_personality->personality3 = 'C';}
+     if ($R==$res3)     {$res6 = 'R';}
+     elseif ($I==$res3) {$res6 = 'I';}
+     elseif ($A==$res3) {$res6 = 'A';}
+     elseif ($S==$res3) {$res6 = 'S';}
+     elseif ($E==$res3) {$res6 = 'E';}
+     elseif ($C==$res3) {$res6 = 'C';}
      
-    $holland_personality->save();
-
-    $email = \Auth::user()->email;
+     $holland_personality->personality1 = $res4;
+     $holland_personality->personality2 = $res5;
+     $holland_personality->personality3 = $res6;
+     $holland_personality->save();
+     $email = \Auth::user()->email;
      $personality1 = \DB::table('holland_personalities')
                     ->where('email',$email)
+                    ->orderBy('updated_at','desc')
                     ->value('personality1');
 
      $personality2 = \DB::table('holland_personalities')
                     ->where('email',$email)
+                    ->orderBy('updated_at','desc')
                     ->value('personality2');
      $personality3 = \DB::table('holland_personalities')
                     ->where('email',$email)
+                    ->orderBy('updated_at','desc')
                     ->value('personality3');               
                
 
@@ -216,7 +221,7 @@ class hollandsubmitController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
