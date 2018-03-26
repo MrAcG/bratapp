@@ -20,15 +20,22 @@ class subjectController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        
+    {  
      $email = \Auth::user()->email;
+     $exists = \DB::table('holland_personalities')->where('email', $email)->first();
+
+   if(!$exists){
+    return view('profiling');
+   }
+   else{
      $personality1 = \DB::table('holland_personalities')
      ->where('email',$email)
+     ->orderBy('updated_at','desc')
      ->pluck('personality1');
 
       $personality2 = \DB::table('holland_personalities')
      ->where('email',$email)
+     ->orderBy('updated_at','desc')
      ->pluck('personality2');
 
      $jobs = \DB::table('jobs')
@@ -40,6 +47,7 @@ class subjectController extends Controller
 
     
        return view('subject')->with('jobs', $jobs);
+   }
     }
         
 

@@ -21,8 +21,13 @@ class jobsController extends Controller
      */
     public function index()
     {
-        
-     $email = \Auth::user()->email;
+    $email = \Auth::user()->email;   
+    $exists = \DB::table('holland_personalities')->where('email', $email)->first();
+
+   if(!$exists){
+    return view('profiling');
+   }
+   else{
      $personality1 = \DB::table('holland_personalities')
      ->where('email',$email)
      ->orderBy('updated_at','desc')
@@ -42,6 +47,7 @@ class jobsController extends Controller
 
     
        return view('jobs')->with('jobs', $jobs);
+   }
     }
         
 
