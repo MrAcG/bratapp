@@ -16,7 +16,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::get('/chart', 'chartController@index');
+Route::get('/allresult', 'allresultController@index');
 Route::get('/home', 'HomeController@index');
 Route::get('/verbal', 'verbalController@index');
 Route::get('/code', 'codeController@index');
