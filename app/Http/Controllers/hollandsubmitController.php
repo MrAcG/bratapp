@@ -128,8 +128,17 @@ class hollandsubmitController extends Controller
      $holland_personality->personality1 = $res4;
      $holland_personality->personality2 = $res5;
      $holland_personality->personality3 = $res6;
-     $holland_personality->save();
+     //$holland_personality->save();
      $email = \Auth::user()->email;
+     $exists = \DB::table('holland_personalities')->where('email', $email)->first();
+
+   if(!$exists){
+    $holland_personality->save();
+   }
+   else{
+    $delete = \DB::table('holland_personalities')->where('email', $email)->delete();
+    $holland_personality->save();
+   }
      $personality1 = \DB::table('holland_personalities')
                     ->where('email',$email)
                     ->orderBy('updated_at','desc')

@@ -151,9 +151,17 @@ class big5submitController extends Controller
         else{
             $big_personality->personality5 =  'CURIOUS';
         }
-
-    $big_personality->save();
+    //taking only last entry of many test results
         $email = \Auth::user()->email;
+        $exists = \DB::table('big_personalities')->where('email', $email)->first();
+
+   if(!$exists){
+    $big_personality->save();
+   }
+   else{
+    $delete = \DB::table('big_personalities')->where('email', $email)->delete();
+    $big_personality->save();
+   }
      $personality1 = \DB::table('big_personalities')
                     ->where('email',$email)
                     ->orderBy('updated_at','desc')
