@@ -60,6 +60,17 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="admin" class="col-md-4 control-label">Admin?</label>
+
+                            <div class="col-md-6">
+                                
+                                <input id="admin" type="radio" name="admin" value="YES"> YES<br>
+                                <input id="admin" type="radio" name="admin" value="NO" checked> NO<br>
+                                
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Register

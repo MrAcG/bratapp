@@ -23,6 +23,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $admin= \Auth::user()->admin;
+        // echo($admin);
+        if($admin=='YES'){   
+            return view('homeadmin');
+        }
+        else{
+            return view('home');
+        }
     }
 }

@@ -50,9 +50,15 @@
                             <li><a href="<?php echo e(route('register')); ?>">Register</a></li>
                         <?php else: ?>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    <?php echo e(Auth::user()->name); ?> <span class="caret"></span>
-                                </a>
+                                <?php if((Auth::user()->admin)=='YES'): ?>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    Prof. <?php echo e(Auth::user()->name); ?> <span class="caret"></span>
+                                    </a>
+                                <?php else: ?>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                        <?php echo e(Auth::user()->name); ?> <span class="caret"></span>
+                                    </a>
+                                <?php endif; ?>
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>

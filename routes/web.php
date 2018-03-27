@@ -69,6 +69,10 @@ Route::get('/logictest', 'logictestController@index');
 Route::get('/technicaltest', 'technicaltestController@index');
 Route::get('/subject', 'subjectController@index');
 
+Route::get('/students', 'studentController@index');
+Route::get('/testscores', 'testscoreController@index');
+Route::get('/personality', 'personalityController@index');
+
 Route::resource('/timetestSubmit','timetestSubmitController');
 Route::resource('/commstestSubmit','commstestSubmitController');
 Route::resource('/changetestSubmit','changetestSubmitController');
