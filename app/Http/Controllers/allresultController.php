@@ -15,9 +15,7 @@ class allresultController extends Controller
     //
     public function index()
     {
-        
-        $score = \DB::table('timetests')->get(['score']);
-        
+        $score = \DB::table('timetests')->orderBy('created_at', 'desc')->take(5)->get(['score']);
         return view('allresult')->with('score',$score);
 
     }
