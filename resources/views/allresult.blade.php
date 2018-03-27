@@ -6,23 +6,23 @@
 
     window.onload=function(){
       var chart=new CanvasJS.Chart("chartContainer",{
-        title: {
-          text: "Results Graph"
-      },
       data: [
       {
         type:"column",
         dataPoints: [
-<?php 
+          <?php     
           foreach($score as $rows)
           {
-            echo "{label:'',y:{$rows->score}},\r\n";
+            echo "{label:'',y:{$rows->score}},";
           }
           ?>
 
         ]
-      }]});
+      }],
+
+    });
       chart.render();
+      
     }
   </script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
