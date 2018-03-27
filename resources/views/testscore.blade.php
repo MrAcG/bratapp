@@ -11,7 +11,7 @@
 				</div>
 				<div class="panel-body">
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-lg-12" style="overflow-x:auto;">
                             <legend>ChangeTests</legend>						
                             <table class="table table-striped table-hover ">
                                 <thead>

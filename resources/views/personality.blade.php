@@ -11,7 +11,7 @@
 				</div>
 				<div class="panel-body">
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-lg-12" style="overflow-x:auto;">
                             <legend>Big 5 Test Results</legend>						
                             <table class="table table-striped table-hover ">
                                 <thead>

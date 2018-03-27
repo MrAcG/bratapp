@@ -9,7 +9,7 @@
 				<div class="panel-heading">
 					<h2 class="panel-title">Manage Students</h2>
 				</div>
-				<div class="panel-body">
+				<div class="panel-body" style="overflow-x:auto;">
                     <div class="row">
                         <div class="col-lg-12">
                             <legend>Your Students</legend>						
