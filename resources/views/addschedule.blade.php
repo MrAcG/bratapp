@@ -59,6 +59,7 @@
 											<!-- <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span> -->
 										</div>
 									</div>
+									{{--  <input type="hidden" name="email" value="{{Auth::user()->email}}" />  --}}
 									<div class="form-group">
 										<div class="col-lg-10 col-lg-offset-2">
 											<button type="submit" class="btn btn-primary">Submit</button>

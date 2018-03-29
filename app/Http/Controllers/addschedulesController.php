@@ -37,7 +37,8 @@ class addschedulesController extends Controller
     	$schedules->description = $request->input('description');
     	$schedules->startdate = $request->input('startdate');
     	$schedules->enddate = $request->input('enddate');
-    	$schedules->progcomp = $request->input('progcomp');
+		$schedules->progcomp = $request->input('progcomp');
+		$schedules->email = \Auth::user()->email;
     	// echo "<pre>";
     	// echo $schedules;
     	// echo "</pre>";
@@ -71,7 +72,7 @@ class addschedulesController extends Controller
 	    	'enddate' => $request->input('enddate'),
 	    	'progcomp' => $request->input('progcomp')
     	);
-    	Schedule::where('id',$id)->update($data);
+    	Schedule::where('id',$id)->where('email',\Auth::user()->email)->update($data);
     	return redirect("/manschedule")->with('info','Schedule Updated Successfully');
     }
 

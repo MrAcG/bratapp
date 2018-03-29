@@ -72,7 +72,10 @@
                   </td>
                 </tr>
                     @endforeach
+                    @else
+                    <td colspan="6" style="text-align:center">No previous schedules available</td>
                 @endif
+
               </tbody>
             </table> 
 

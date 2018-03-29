@@ -45,6 +45,8 @@
 										</td>
 									</tr>
 									@endforeach
+									@else
+									<td colspan="6" style="text-align:center">No current schedules present</td>
 									@endif
 								</tbody>
 							</table>

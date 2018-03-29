@@ -12,7 +12,7 @@ class manschedulesController extends Controller
     {
     	
     	$currentDate = date('Y-m-d');
-		$schedules = Schedule::where('enddate', '>=', $currentDate)->get();		
+		$schedules = Schedule::where('enddate', '>=', $currentDate)->where('email',\Auth::user()->email)->get();		
     	
     	
     	return view('manschedule',['schedules'=>$schedules]);
