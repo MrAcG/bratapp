@@ -70,8 +70,10 @@ Route::get('/technicaltest', 'technicaltestController@index');
 Route::get('/subject', 'subjectController@index');
 
 Route::get('/students', 'studentController@index');
-Route::get('/testscores', 'testscoreController@index');
-Route::get('/personality', 'personalityController@index');
+Route::get('/testscores/{student_email}', 'testscoreController@index');
+Route::get('/personality/{student_email}', 'personalityController@index');
+Route::get('/manstudents/{student_email}', 'manstudentController@index');
+
 
 Route::resource('/timetestSubmit','timetestSubmitController');
 Route::resource('/commstestSubmit','commstestSubmitController');

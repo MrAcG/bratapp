@@ -40,6 +40,8 @@
                                         <td>{{$big5->personality5}}</td>
                                     </tr>
                                     @endforeach
+                                    @else
+                                    <td colspan="8" style="text-align:center">Student hasn't given this test yet</td>
                                     @endif
                                 </tbody>
                             </table>
@@ -67,6 +69,8 @@
                                         <td>{{$holland->personality3}}</td>								
                                     </tr>
                                     @endforeach
+                                    @else
+                                    <td colspan="6" style="text-align:center">Student hasn't given this test yet</td>
                                     @endif
                                 </tbody>
                             </table>

@@ -12,7 +12,7 @@
 				<div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12" style="overflow-x:auto;">
-                            <legend>ChangeTests</legend>						
+                            <legend>Change Management Tests</legend>						
                             <table class="table table-striped table-hover ">
                                 <thead>
                                     <tr>                                        
@@ -28,10 +28,12 @@
                                         <td>{{$changetests->score}}</td>
                                     </tr>
                                     @endforeach
+                                    @else
+                                    <td colspan="2" style="text-align:center">Student hasn't given this test yet</td>
                                     @endif
                                 </tbody>
                             </table>
-                           <legend>CodeTests</legend>						
+                           <legend>Coding Decoding Tests</legend>						
                             <table class="table table-striped table-hover ">
                                 <thead>
                                     <tr>                                        
@@ -47,10 +49,12 @@
                                         <td>{{$codetests->score}}</td>
                                     </tr>
                                     @endforeach
+                                    @else
+                                    <td colspan="2" style="text-align:center">Student hasn't given this test yet</td>
                                     @endif
                                 </tbody>
                             </table>
-                            <legend>CommsTests</legend>						
+                            <legend>Communication Skills Tests</legend>						
                             <table class="table table-striped table-hover ">
                                 <thead>
                                     <tr>                                        
@@ -66,10 +70,12 @@
                                         <td>{{$commstests->score}}</td>
                                     </tr>
                                     @endforeach
+                                    @else
+                                    <td colspan="2" style="text-align:center">Student hasn't given this test yet</td>
                                     @endif
                                 </tbody>
                             </table>
-                            <legend>LeaderTests</legend>						
+                            <legend>Leadership Skills Tests</legend>						
                             <table class="table table-striped table-hover ">
                                 <thead>
                                     <tr>                                        
@@ -85,10 +91,12 @@
                                         <td>{{$leadertests->score}}</td>
                                     </tr>
                                     @endforeach
+                                    @else
+                                    <td colspan="2" style="text-align:center">Student hasn't given this test yet</td>
                                     @endif
                                 </tbody>
                             </table>
-                            <legend>LogicTests</legend>						
+                            <legend>Logicical Reasoning Tests</legend>						
                             <table class="table table-striped table-hover ">
                                 <thead>
                                     <tr>                                        
@@ -104,10 +112,12 @@
                                         <td>{{$logictests->score}}</td>
                                     </tr>
                                     @endforeach
+                                    @else
+                                    <td colspan="2" style="text-align:center">Student hasn't given this test yet</td>
                                     @endif
                                 </tbody>
                             </table>
-                            <legend>QuantiTests</legend>						
+                            <legend>Quantitative Aptitude Tests</legend>						
                             <table class="table table-striped table-hover ">
                                 <thead>
                                     <tr>                                        
@@ -123,10 +133,12 @@
                                         <td>{{$quantitests->score}}</td>
                                     </tr>
                                     @endforeach
+                                    @else
+                                    <td colspan="2" style="text-align:center">Student hasn't given this test yet</td>
                                     @endif
                                 </tbody>
                             </table>
-                            <legend>StressTests</legend>						
+                            <legend>Stress Management Tests</legend>						
                             <table class="table table-striped table-hover ">
                                 <thead>
                                     <tr>                                        
@@ -142,10 +154,12 @@
                                         <td>{{$stresstests->score}}</td>
                                     </tr>
                                     @endforeach
+                                    @else
+                                    <td colspan="2" style="text-align:center">Student hasn't given this test yet</td>
                                     @endif
                                 </tbody>
                             </table>
-                            <legend>TechnicalTests</legend>						
+                            <legend>Technical Tests</legend>						
                             <table class="table table-striped table-hover ">
                                 <thead>
                                     <tr>                                        
@@ -161,10 +175,12 @@
                                         <td>{{$technicaltests->score}}</td>
                                     </tr>
                                     @endforeach
+                                    @else
+                                    <td colspan="2" style="text-align:center">Student hasn't given this test yet</td>
                                     @endif
                                 </tbody>
                             </table>
-                            <legend>TimeTests</legend>						
+                            <legend>Time Management Tests</legend>						
                             <table class="table table-striped table-hover ">
                                 <thead>
                                     <tr>                                        
@@ -180,10 +196,12 @@
                                         <td>{{$timetests->score}}</td>
                                     </tr>
                                     @endforeach
+                                    @else
+                                    <td colspan="2" style="text-align:center">Student hasn't given this test yet</td>
                                     @endif
                                 </tbody>
                             </table>
-                            <legend>VerbalTests</legend>						
+                            <legend>Verbal,Grammatical Reasoning Tests</legend>						
                             <table class="table table-striped table-hover ">
                                 <thead>
                                     <tr>                                        
@@ -199,6 +217,8 @@
                                         <td>{{$verbaltests->score}}</td>
                                     </tr>
                                     @endforeach
+                                    @else
+                                    <td colspan="2" style="text-align:center">Student hasn't given this test yet</td>
                                     @endif
                                 </tbody>
                             </table>

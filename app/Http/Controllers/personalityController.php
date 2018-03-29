@@ -12,10 +12,10 @@ class personalityController extends Controller
         $this->middleware('auth');
     }
     //
-    public function index()
+    public function index($email)
     {
-        $holland = \DB::table('holland_personalities')->get()->sortBy('email');
-        $big5 = \DB::table('big_personalities')->get()->sortBy('email');
+        $holland = \DB::table('holland_personalities')->where('email',$email)->orderBy('created_at', 'desc')->get();
+        $big5 = \DB::table('big_personalities')->where('email',$email)->orderBy('created_at', 'desc')->get();
         return view('personality',compact('holland','big5'));
     }
 }

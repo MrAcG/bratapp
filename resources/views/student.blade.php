@@ -19,7 +19,8 @@
                                         <th>#</th>
                                         <th>ID</th>
                                         <th>Name</th>
-                                        <th>Email</th>									
+                                        <th>Email</th>
+                                        <th></th>									
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -29,7 +30,14 @@
                                         <td>{{$user->id}}</td>
                                         <td>{{$user->id}}</td>
                                         <td>{{$user->name}}</td>
-                                        <td>{{$user->email}}</td>								
+                                        <td>{{$user->email}}</td>
+                                        <td>
+                                            <a href="/manstudents/{{$user->email}}">
+                                                <button class="btn btn-default">
+                                                    Manage
+                                                </button>                                                
+                                            </a>
+                                        </td>							
                                     </tr>
                                     @endforeach
                                     @endif
@@ -47,5 +55,4 @@
         </div>
     </div>    
 </div>
-
 @endsection

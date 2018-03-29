@@ -12,18 +12,18 @@ class testscoreController extends Controller
         $this->middleware('auth');
     }
     //
-    public function index()
+    public function index($email)
     {        
-        $changetests = \DB::table('changetests')->get()->sortBy('email');
-        $codetests = \DB::table('codetests')->get()->sortBy('email');
-        $commstests = \DB::table('commstests')->get()->sortBy('email');
-        $leadertests = \DB::table('leadertests')->get()->sortBy('email');
-        $logictests = \DB::table('logictests')->get()->sortBy('email');
-        $quantitests = \DB::table('quantitests')->get()->sortBy('email');
-        $stresstests = \DB::table('stresstests')->get()->sortBy('email');
-        $technicaltests = \DB::table('technicaltests')->get()->sortBy('email');
-        $timetests = \DB::table('timetests')->get()->sortBy('email');
-        $verbaltests = \DB::table('verbaltests')->get()->sortBy('email');
+        $changetests = \DB::table('changetests')->where('email',$email)->orderBy('created_at', 'desc')->get();
+        $codetests = \DB::table('codetests')->where('email',$email)->orderBy('created_at', 'desc')->get();
+        $commstests = \DB::table('commstests')->where('email',$email)->orderBy('created_at', 'desc')->get();
+        $leadertests = \DB::table('leadertests')->where('email',$email)->orderBy('created_at', 'desc')->get();
+        $logictests = \DB::table('logictests')->where('email',$email)->orderBy('created_at', 'desc')->get();
+        $quantitests = \DB::table('quantitests')->where('email',$email)->orderBy('created_at', 'desc')->get();
+        $stresstests = \DB::table('stresstests')->where('email',$email)->orderBy('created_at', 'desc')->get();
+        $technicaltests = \DB::table('technicaltests')->where('email',$email)->orderBy('created_at', 'desc')->get();
+        $timetests = \DB::table('timetests')->where('email',$email)->orderBy('created_at', 'desc')->get();
+        $verbaltests = \DB::table('verbaltests')->where('email',$email)->orderBy('created_at', 'desc')->get();
         return view('testscore',compact('changetests','codetests','commstests','leadertests','logictests','quantitests','stresstests','technicaltests','timetests','verbaltests'));
     }
 }

@@ -87,21 +87,11 @@
     <!-- Scripts -->
     <script src="<?php echo e(asset('js/app.js')); ?>"></script>
     <script type="application/javascript">
-        // $(document).ready(function(){
-        //     $(document).on("click","button",function(){
-        //         alert(this.id);
-        //         var q = "Testing google search"+"study.com";
-        //         document.getElementById('search').onclick = function() {
-        //             // window.open('http://google.com/search?q='+q);
-        //         };
-        //     });
-        // });
-        // function search() {
-        //     var q = "Testing google search"+"study.com";
-        //     document.getElementById('search').onclick = function() {
-        //         window.open('http://google.com/search?q='+q);
-        //     };
-        // }
+    
+        function click(x){
+            alert(x);
+        }
+      
        
     </script>
 </body>
