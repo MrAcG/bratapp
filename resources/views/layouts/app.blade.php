@@ -49,6 +49,13 @@
                             <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
+                            @if ((Auth::user()->admin)=='NO')
+                            <li>
+                                <a href="#">
+                                    Feedback
+                                </a>
+                            </li>
+                            @endif
                             <li class="dropdown">
                                 @if ((Auth::user()->admin)=='YES')
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

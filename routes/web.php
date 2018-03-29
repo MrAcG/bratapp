@@ -89,3 +89,6 @@ Route::resource('/hollandsubmit','hollandsubmitController');
 Route::resource('/big5submit','big5submitController');
 Route::resource('/jobs','jobsController');
 
+Route::get('/feedback/{student_email}', 'feedbackController@feedback');
+Route::post('/feedback', 'feedbackController@feedbackPost');
+

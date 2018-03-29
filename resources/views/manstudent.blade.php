@@ -36,7 +36,7 @@
 							<div class="col-lg-4">
 								<img class="img-circle"  src="{{URL::asset('/images/job.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
 								<h3>Feedback</h3>
-								<p><a class="btn btn-default" href="#" role="button">Explore &raquo;</a>
+								<p><a class="btn btn-default" href="/feedback/{{$studentemail}}" role="button">Explore &raquo;</a>
 								</p>
 							</div>
 							<!-- /.col-lg-4 -->

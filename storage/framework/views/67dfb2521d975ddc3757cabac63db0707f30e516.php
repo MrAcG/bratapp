@@ -49,6 +49,13 @@
                             <li><a href="<?php echo e(route('login')); ?>">Login</a></li>
                             <li><a href="<?php echo e(route('register')); ?>">Register</a></li>
                         <?php else: ?>
+                            <?php if((Auth::user()->admin)=='NO'): ?>
+                            <li>
+                                <a href="#">
+                                    Feedback
+                                </a>
+                            </li>
+                            <?php endif; ?>
                             <li class="dropdown">
                                 <?php if((Auth::user()->admin)=='YES'): ?>
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
