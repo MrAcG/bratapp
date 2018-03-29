@@ -92,3 +92,5 @@ Route::resource('/jobs','jobsController');
 Route::get('/feedback/{student_email}', 'feedbackController@feedback');
 Route::post('/feedback', 'feedbackController@feedbackPost');
 
+Route::get('/feedback', 'feedbackController@index');
+Route::get('/readfeedback/{id}', 'readfeedbackController@index');

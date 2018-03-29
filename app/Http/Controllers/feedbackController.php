@@ -8,7 +8,11 @@ use App\Feedback;
  
 class feedbackController extends Controller
 {
-   /**
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    /**
     * Show the application dashboard.
     *
     * @return \Illuminate\Http\Response
@@ -36,4 +40,11 @@ class feedbackController extends Controller
        $request->session()->flash('alert-success', 'Feedback was successfully submtted');
        return redirect('/students');
    }
+
+   public function index()
+    {
+        $email = \Auth::user()->email;
+        $feedback = \DB::table('feedback')->where('email', $email)->orderBy('created_at','desc')->get();
+        return view('recfeedback',compact('feedback'));
+    }
 }

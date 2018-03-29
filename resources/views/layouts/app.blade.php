@@ -15,6 +15,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}">
     <script type="text/javascript" src="{{asset('/js/jquery.js')}}"></script>-->
     <!-- <script type="text/javascript" src="{{asset('/js/bootstrap.min.js')}}"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <div id="app">
@@ -51,7 +52,7 @@
                         @else
                             @if ((Auth::user()->admin)=='NO')
                             <li>
-                                <a href="#">
+                                <a href="/feedback">
                                     Feedback
                                 </a>
                             </li>
@@ -93,12 +94,13 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script type="application/javascript">
-    
-        function click(x){
-            alert(x);
-        }
-      
-       
+        $(document).ready( function() {
+            $(".more").toggle(function(){
+                $(this).text("less..").siblings(".complete").show();    
+            }, function(){
+                $(this).text("more..").siblings(".complete").hide();    
+            });
+        });      
     </script>
 </body>
 </html>
