@@ -29,7 +29,7 @@
                                     @if(count($feedback)>0)
                                     @foreach($feedback->all() as $feedback)
                                     <?php 
-                                        $from=\DB::table('users')->where('email', $feedback->email)->get()->pluck('name');
+                                        $from=\DB::table('users')->where('email', $feedback->from)->get()->pluck('name');
                                         // echo($from);
                                     ?>
                                     <tr>

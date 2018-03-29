@@ -18,7 +18,7 @@
                             <div>
                                 <div>
                                     <legend>From</legend>
-                                    <?php $from=\DB::table('users')->where('email', $feedback->email)->get()->pluck('name');?>
+                                    <?php $from=\DB::table('users')->where('email', $feedback->from)->get()->pluck('name');?>
                                     <span>Prof. <?php print($from[0]); ?></span><br><br>
                                 </div>                        
                                 <div>
