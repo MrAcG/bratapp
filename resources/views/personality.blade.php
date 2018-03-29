@@ -45,7 +45,17 @@
                                     @endif
                                 </tbody>
                             </table>
-                            <legend>Holland Test Results</legend>						
+                            <legend>Holland Test Results</legend>
+                            <div>NOTE: 
+                                <ul>
+                                    <li>R - Realistic</li>
+                                    <li>A - Artistic</li>
+                                    <li>I - Investigative</li>
+                                    <li>S - Social</li>
+                                    <li>E - Enterprsing</li>
+                                    <li>C - Conventional</li> 
+                                </ul>               
+                            </div>						
                             <table class="table table-striped table-hover ">
                                 <thead>
                                     <tr>
