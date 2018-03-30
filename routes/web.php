@@ -68,6 +68,7 @@ Route::get('/codetest', 'codetestController@index');
 Route::get('/logictest', 'logictestController@index');
 Route::get('/technicaltest', 'technicaltestController@index');
 Route::get('/subject', 'subjectController@index');
+Route::get('/subject/{jobs}', 'subjectController@subjectdetail');
 
 Route::get('/students', 'studentController@index');
 Route::get('/testscores/{student_email}', 'testscoreController@index');

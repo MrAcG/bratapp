@@ -14,10 +14,12 @@ class Jobs extends Migration
     public function up()
     {
        Schema::create('jobs', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('job');
             $table->string('personality1');
             $table->string('personality2');
             $table->string('personality3');
+            $table->text('url');
             $table->timestamps();
         });
     }

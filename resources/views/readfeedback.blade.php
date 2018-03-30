@@ -32,7 +32,7 @@
                             </div>
                             @endforeach
                             @else
-                            <span colspan="2" style="text-align:center">Please don't try to read someone else's feedback</span>
+                            <span colspan="3" style="text-align:center">Please don't try to read someone else's feedback</span>
                             @endif                            
                                                       
                         </div>

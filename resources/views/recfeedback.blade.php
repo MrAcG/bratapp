@@ -52,7 +52,7 @@
                                     </tr>
                                     @endforeach
                                     @else
-                                    <td colspan="2" style="text-align:center">No feedback has been received yet</td>
+                                    <td colspan="3" style="text-align:center">No feedback has been received yet</td>
                                     @endif
                                 </tbody>
                             </table>                            

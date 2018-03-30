@@ -21,33 +21,42 @@ class subjectController extends Controller
      */
     public function index()
     {  
-     $email = \Auth::user()->email;
-     $exists = \DB::table('holland_personalities')->where('email', $email)->first();
+        $email = \Auth::user()->email;
+        $exists = \DB::table('holland_personalities')->where('email', $email)->first();
 
-   if(!$exists){
-    return view('profiling');
-   }
-   else{
-     $personality1 = \DB::table('holland_personalities')
-     ->where('email',$email)
-     ->orderBy('updated_at','desc')
-     ->pluck('personality1');
+        if(!$exists){
+            return view('profiling');
+        }
+        else{
+            $personality1 = \DB::table('holland_personalities')
+            ->where('email',$email)
+            ->orderBy('updated_at','desc')
+            ->pluck('personality1');
 
-      $personality2 = \DB::table('holland_personalities')
-     ->where('email',$email)
-     ->orderBy('updated_at','desc')
-     ->pluck('personality2');
+            $personality2 = \DB::table('holland_personalities')
+            ->where('email',$email)
+            ->orderBy('updated_at','desc')
+            ->pluck('personality2');
 
-     $jobs = \DB::table('jobs')
-     ->where('personality1',$personality1)
-     ->where('personality2',$personality2)
-     ->orWhere('personality3',$personality2)
-     ->pluck('job');
-    
+            $jobs = \DB::table('jobs')
+            ->where('personality1',$personality1)
+            ->where('personality2',$personality2)
+            ->orWhere('personality3',$personality2)
+            ->pluck('job');
+            
 
-    
-       return view('subject')->with('jobs', $jobs);
-   }
+            
+            return view('subject')->with('jobs', $jobs);
+        }
+    }
+
+
+    public function subjectdetail($job)
+    {  
+        $email = \Auth::user()->email;
+        $jobdetail = \DB::table('jobs')->where('job', $job)->get();
+
+        return view('subjectdetail', compact('jobdetail'));
     }
         
 
