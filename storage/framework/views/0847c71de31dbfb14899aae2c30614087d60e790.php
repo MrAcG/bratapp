@@ -78,7 +78,7 @@
 							<div class="col-lg-4">
 								<img class="img-circle"  src="<?php echo e(URL::asset('/images/tests.png')); ?>" alt="Generic placeholder image" style="width: 140px; height: 140px;">
 								<h3>Resume</h3>
-								<p><a class="btn btn-default" href="/resume" role="button">Explore &raquo;</a>
+								<p><a class="btn btn-default" href="<?php echo e(url('/resume')); ?>" role="button">Explore &raquo;</a>
 								</p>
 							</div>
 							<!-- /.col-lg-4 -->

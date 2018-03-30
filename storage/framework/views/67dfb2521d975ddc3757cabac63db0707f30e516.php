@@ -52,6 +52,11 @@
                         <?php else: ?>
                             <?php if((Auth::user()->admin)=='NO'): ?>
                             <li>
+                                <a href="/home">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
                                 <a href="/feedback">
                                     Feedback
                                 </a>

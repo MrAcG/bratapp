@@ -34,9 +34,6 @@ Route::get('/time','timeController@index');
 Route::get('/stress','stressController@index');
 Route::get('/comms','commsController@index');
 Route::get('/change','changeController@index');
-Route::get('/resume', function () {
-    return file_get_contents(public_path().'/resume.html'); 
-});
 
 Route::get('/selfdev','selfdevController@index');
 Route::get('/schedule','scheduleController@index');
@@ -89,6 +86,7 @@ Route::resource('/technicaltestSubmit', 'technicaltestSubmitController');
 Route::resource('/hollandsubmit','hollandsubmitController');
 Route::resource('/big5submit','big5submitController');
 Route::resource('/jobs','jobsController');
+Route::resource('/resume','resumeController');
 
 Route::get('/feedback/{student_email}', 'feedbackController@feedback');
 Route::post('/feedback', 'feedbackController@feedbackPost');
