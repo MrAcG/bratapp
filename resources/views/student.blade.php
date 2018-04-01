@@ -2,24 +2,21 @@
 @section('content')
 <div class="flash-message">
     @foreach (['danger', 'warning', 'success', 'info'] as $msg)
-      @if(Session::has('alert-' . $msg))
-
-      <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></p>
-      @endif
+        @if(Session::has('alert-' . $msg))
+            <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }} <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></p>
+        @endif
     @endforeach
-  </div> <!-- end .flash-message -->
+</div> <!-- end .flash-message -->
 <div class="container">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
-			<!--  Panels  -->
-			<!-- <center> -->
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<h2 class="panel-title">Manage Students</h2>
 				</div>
 				<div class="panel-body" style="overflow-x:auto;">
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-lg-12" style="overflow-x:auto;">
                             <legend>Your Students</legend>						
                             <table class="table table-striped table-hover ">
                                 <thead>
@@ -50,16 +47,11 @@
                                     @endforeach
                                     @endif
                                 </tbody>
-                            </table>
-                            
+                            </table>                            
                         </div>
                     </div>
 			    </div>
-		    </div>
-		<!-- /.row -->
-		<!-- Three columns of Tests -->
-		<!-- /.row -->
-		
+		    </div>		
         </div>
     </div>    
 </div>

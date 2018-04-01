@@ -2,16 +2,14 @@
 @section('content')
 <div class="container">
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<!--  Panels  -->
-			<!-- <center> -->
+		<div class="col-md-8 col-md-offset-2">			
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<h2 class="panel-title">Manage Schedules</h2>
 				</div>
 				<div class="panel-body">
 					<div class="row">
-						<div class="col-lg-12">
+						<div class="col-lg-12" style="overflow-x:auto;">
 							<legend>Your Schedules</legend>
 							@if(session('info'))
 							<div class="alert alert-success">
@@ -26,7 +24,9 @@
 										<th>Description</th>
 										<th>Start Date</th>
 										<th>End Date</th>
-										<th>Action</th>
+										<th>View</th>
+										<th>Update</th>
+										<th>Delete</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -37,12 +37,11 @@
 										<td>{{$schedule->title}}</td>
 										<td>{{$schedule->description}}</td>
 										<td>{{$schedule->startdate}}</td>
-										<td>{{$schedule->enddate}}</td>
-										<td>
-											<a href='{{url("/read/{$schedule->id}")}}' class="label label-primary">View</a> |
-											<a href='{{url("/update/{$schedule->id}")}}' class="label label-success">Update</a> |
-											<a href='{{url("/delete/{$schedule->id}")}}' class="label label-danger">Delete</a>
-										</td>
+										<td>{{$schedule->enddate}}</td>										
+										<td><a href='{{url("/read/{$schedule->id}")}}' class="label label-primary">View</a></td> 
+										<td><a href='{{url("/update/{$schedule->id}")}}' class="label label-success">Update</a></td> 
+										<td><a href='{{url("/delete/{$schedule->id}")}}' class="label label-danger">Delete</a></td>
+										
 									</tr>
 									@endforeach
 									@else
