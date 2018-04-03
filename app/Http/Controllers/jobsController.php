@@ -21,33 +21,52 @@ class jobsController extends Controller
      */
     public function index()
     {
-    $email = \Auth::user()->email;   
-    $exists = \DB::table('holland_personalities')->where('email', $email)->first();
+        $email = \Auth::user()->email;   
+        $exists = \DB::table('holland_personalities')->where('email', $email)->first();
 
-   if(!$exists){
-    return view('profiling');
-   }
-   else{
-     $personality1 = \DB::table('holland_personalities')
-     ->where('email',$email)
-     ->orderBy('updated_at','desc')
-     ->pluck('personality1');
+        if(!$exists){
+            return view('profiling');
+        }
+        else{
+            $personality1 = \DB::table('holland_personalities')
+            ->where('email',$email)
+            ->orderBy('updated_at','desc')
+            ->pluck('personality1');
 
-      $personality2 = \DB::table('holland_personalities')
-     ->where('email',$email)
-     ->orderBy('updated_at','desc')
-     ->pluck('personality2');
+            $personality2 = \DB::table('holland_personalities')
+            ->where('email',$email)
+            ->orderBy('updated_at','desc')
+            ->pluck('personality2');
 
-     $jobs = \DB::table('jobs')
-     ->where('personality1',$personality1)
-     ->where('personality2',$personality2)
-     ->orWhere('personality3',$personality2)
-     ->pluck('job');
-    
+            $jobs = \DB::table('jobs')
+            ->where('personality1',$personality1)
+            ->where('personality2',$personality2)
+            ->orWhere('personality3',$personality2)
+            ->pluck('job');    
 
-    
-       return view('jobs')->with('jobs', $jobs);
-   }
+            $jobs_science = \DB::table('jobs')
+            ->where('personality1',$personality1)
+            ->where('personality2',$personality2)
+            ->orWhere('personality3',$personality2)
+            ->where('field','S')
+            ->pluck('job');
+
+            $jobs_commerce = \DB::table('jobs')
+            ->where('personality1',$personality1)
+            ->where('personality2',$personality2)
+            ->orWhere('personality3',$personality2)
+            ->where('field','C')
+            ->pluck('job');
+
+            $jobs_arts = \DB::table('jobs')
+            ->where('personality1',$personality1)
+            ->where('personality2',$personality2)
+            ->orWhere('personality3',$personality2)
+            ->where('field','A')
+            ->pluck('job');
+        
+            return view('jobs',compact('jobs','jobs_science','jobs_commerce','jobs_arts'));
+        }
     }
         
 

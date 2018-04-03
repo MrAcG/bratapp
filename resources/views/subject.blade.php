@@ -12,28 +12,60 @@
 						<div class="row">
 							<div class="col-lg-12" style="overflow-x:auto;">
                                 <fieldset>
-                                <legend>
-                                    Jobs best suited for your personality are:
-                                </legend>
-                                <h5>Click on the job to find the subjects needed to be studied</h5>                                    
-                                <center> 
-                                @if(count($jobs)==0)
-                                    <p>Please give the BIG 5 and Holland Tests to get your customised job fields</p>
-                                @else 
-                                    @for ($i = 0; $i < count($jobs);$i++)    
-                                        <div  style="font-size:12px;">                                
-                                        <p> 
-                                            {{--  <a href="http://google.com/search?q=how+to+become+{{$jobs[$i]}}+study.com&oq=how+to+become+{{$jobs[$i]}}+study.com" target="_blank">                                              --}}
-                                                <a class="btn btn-default btn-block" href="/subject/{{$jobs[$i]}}" role="button"> {{ $jobs->get($i) }}</a>
-                                                {{--  <button class="btn btn-default btn-block">
-                                                    {{ $jobs->get($i) }}
-                                                </button>    --}}
-                                            {{--  </a>  --}}
-                                        </p>
+                                    <legend>
+                                        Jobs best suited for your personality are:
+                                    </legend>
+                                    <h5>
+                                        Click on the job to find the subjects needed to be studied
+                                    </h5>
+                                    <span style="align:right;">Sort by:
+                                        <button id="un" class="btn btn-default btn-sm" style="background-color:green; color:white">Unfiltered</button>
+                                        <button id="sc" class="btn btn-default btn-sm">Science</button>
+                                        <button id="co" class="btn btn-default btn-sm">Commerce</button>
+                                        <button id="ar" class="btn btn-default btn-sm">Arts</button>
+                                    </span><br /><br />                                 
+                                    <center> 
+                                    @if(count($jobs)==0)
+                                        <p>Please give the BIG 5 and Holland Tests to get your customised job fields</p>
+                                    @else 
+                                        <div id="uldis">
+                                            @for ($i = 0; $i < count($jobs);$i++)    
+                                                <div style="font-size:12px;">                                
+                                                    <p> 
+                                                        <a class="btn btn-default btn-block" href="/subject/{{$jobs[$i]}}" role="button"> {{ $jobs->get($i) }}</a>                                                       
+                                                    </p>
+                                                </div>
+                                            @endfor
                                         </div>
-                                    @endfor 
-                                @endif
-                                </center>
+                                        <div id="scdis" style="display:none;">
+                                            @for ($i = 0; $i < count($jobs_science);$i++)    
+                                                <div style="font-size:12px;">                                
+                                                    <p> 
+                                                        <a class="btn btn-default btn-block" href="/subject/{{$jobs_science[$i]}}" role="button"> {{ $jobs_science->get($i) }}</a>                                                       
+                                                    </p>
+                                                </div>
+                                            @endfor
+                                        </div> 
+                                        <div id="codis" style="display:none;">
+                                            @for ($i = 0; $i < count($jobs_commerce);$i++)    
+                                                <div style="font-size:12px;">                                
+                                                    <p> 
+                                                        <a class="btn btn-default btn-block" href="/subject/{{$jobs_commerce[$i]}}" role="button"> {{ $jobs_commerce->get($i) }}</a>                                                       
+                                                    </p>
+                                                </div>
+                                            @endfor
+                                        </div>
+                                        <div id="ardis" style="display:none;">
+                                            @for ($i = 0; $i < count($jobs_arts);$i++)    
+                                                <div style="font-size:12px;">                                
+                                                    <p> 
+                                                        <a class="btn btn-default btn-block" href="/subject/{{$jobs_arts[$i]}}" role="button"> {{ $jobs_arts->get($i) }}</a>                                                       
+                                                    </p>
+                                                </div>
+                                            @endfor
+                                        </div>
+                                    @endif
+                                    </center>
                                 </fieldset>
 							</div>
                         </div>                    

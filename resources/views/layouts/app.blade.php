@@ -131,13 +131,68 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script type="application/javascript">
-        $(document).ready( function() {
-            $(".more").toggle(function(){
-                $(this).text("less..").siblings(".complete").show();    
-            }, function(){
-                $(this).text("more..").siblings(".complete").hide();    
-            });
-        });      
+       $("#un").click(function () {
+            $("#uldis").show();
+            $("#scdis").hide();
+            $("#codis").hide();
+            $("#ardis").hide(); 
+            $(this).css('background-color','green');
+            $(this).css('color','white');
+            $(sc).css('background-color','white');
+            $(sc).css('color','#636b6f');
+            $(co).css('background-color','white');
+            $(co).css('color','#636b6f');           
+            $(ar).css('background-color','white');
+            $(ar).css('color','#636b6f');
+        });
+
+        $("#sc").click(function () {
+            $("#uldis").hide();
+            $("#scdis").show();
+            $("#codis").hide();
+            $("#ardis").hide();
+            $(this).css('background-color','green');
+            $(this).css('color','white');
+            $(un).css('background-color','white');
+            $(un).css('color','#636b6f');
+            $(co).css('background-color','white');
+            $(co).css('color','#636b6f');           
+            $(ar).css('background-color','white');
+            $(ar).css('color','#636b6f');           
+        });
+
+        $("#co").click(function () {
+            $("#uldis").hide();
+            $("#scdis").hide();
+            $("#codis").show();
+            $("#ardis").hide();
+            $(this).css('background-color','green');
+            $(this).css('color','white');
+            $(sc).css('background-color','white');
+            $(sc).css('color','#636b6f');
+            $(un).css('background-unlor','white');
+            $(un).css('color','#636b6f');           
+            $(ar).css('background-color','white');
+            $(ar).css('color','#636b6f');           
+        });
+
+        $("#ar").click(function () {
+            $("#uldis").hide();
+            $("#scdis").hide();
+            $("#codis").hide();
+            $("#ardis").show();
+            $(this).css('background-color','green');
+            $(this).css('color','white');
+            $(sc).css('background-color','white');
+            $(sc).css('color','#636b6f');
+            $(co).css('background-color','white');
+            $(co).css('color','#636b6f');           
+            $(un).css('background-color','white');
+            $(un).css('color','#636b6f');           
+        });
+
+          
     </script>
+    
 </body>
 </html>

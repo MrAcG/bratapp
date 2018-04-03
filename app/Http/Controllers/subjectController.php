@@ -43,10 +43,31 @@ class subjectController extends Controller
             ->where('personality2',$personality2)
             ->orWhere('personality3',$personality2)
             ->pluck('job');
+
+            $jobs_science = \DB::table('jobs')
+            ->where('personality1',$personality1)
+            ->where('personality2',$personality2)
+            ->orWhere('personality3',$personality2)
+            ->where('field','S')
+            ->pluck('job');
+
+            $jobs_commerce = \DB::table('jobs')
+            ->where('personality1',$personality1)
+            ->where('personality2',$personality2)
+            ->orWhere('personality3',$personality2)
+            ->where('field','C')
+            ->pluck('job');
+
+            $jobs_arts = \DB::table('jobs')
+            ->where('personality1',$personality1)
+            ->where('personality2',$personality2)
+            ->orWhere('personality3',$personality2)
+            ->where('field','A')
+            ->pluck('job');
             
 
             
-            return view('subject')->with('jobs', $jobs);
+            return view('subject',compact('jobs','jobs_science','jobs_commerce','jobs_arts'));
         }
     }
 
