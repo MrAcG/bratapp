@@ -10,7 +10,26 @@
       var myBarChart = new Chart(ctxB, {
         type: 'bar',
         data: {
-          labels: ["Test 1", "Test 2", "Test 3", "Test 4", "Test 5"],
+          <?php 
+              if(count($score)==5){
+                echo("labels: ['Test 1','Test 2','Test 3','Test 4','Test 5'],");
+              } elseif (count($score)==4){
+                echo("labels: ['Test 1','Test 2','Test 3','Test 4'],");
+              }
+              elseif (count($score)==3){
+                echo("labels: ['Test 1','Test 2','Test 3'],");
+              }
+              elseif (count($score)==2){
+                echo("labels: ['Test 1','Test 2'],");
+              }
+              elseif (count($score)==1){
+                echo("labels: ['Test 1'],");
+              } else {
+                echo ("No Results");
+              }
+
+              ?>
+          
           datasets: [{
               label: 'Score',
               <?php 
