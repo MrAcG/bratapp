@@ -42,7 +42,7 @@ class allresultController extends Controller
     {
         $database=$request->db;
          $score = \DB::table($database)
-        ->orderBy('created_at', 'desc')
+        ->orderBy('created_at', 'asc')
         ->take(5)
         ->where('email',\Auth::user()->email)
         ->pluck('score');
