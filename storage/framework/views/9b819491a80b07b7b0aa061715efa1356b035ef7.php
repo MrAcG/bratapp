@@ -1,10 +1,8 @@
-@extends('layouts.app')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <div class="container">
                           
-                              <h2 class="text-center"><span class="page-heading">Coding Decoding Results:</span></h2>
+                              <h2 class="text-center"><span class="page-heading">Time Management Test Results:</span></h2>
                                     
                               <div class="row">
 
@@ -19,33 +17,20 @@
                                              
                                               
                                        <div  style="font-size:30px;" class="col-sm-12 animateFadeIUp ">
-                                            @foreach($result as $result)
-                                            {{ $result }}/15
-                                           @endforeach
-                                           <?php $asd=($result/15*100);?>
+                                            <?php $__currentLoopData = $result; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $result): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <?php echo e($result); ?>/75
+                                           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                           <?php $asd=($result/75*100);?>
                                           </div>
                               
                                           <div class="panel panel-default">
                                           <center>
                                             <div class="panel-body">
                                              <div class="row">
-
-
-                                          <h1 style="font-size:15px;">Result Graph</h1>
-
-                                          <div style="height: 450px;width: 100%;background-color: #ddd;position: relative;"><br>                                    
-                                          <p style="text-align: left;font-size:18px;">100%</p><br><br>
-                                          <p style="text-align: left;font-size:18px;">80%</p><br><br> 
-                                          <p style="text-align: left;font-size:18px;">60%</p><br><br> 
-                                          <p style="text-align: left;font-size:18px;">40%</p><br><br> 
-                                          <p style="text-align: left;font-size:18px;">20%</p><br>         <p style="text-align: left;font-size:18px;">10%</p>
-
-                                        <div id="myBar" style="position:absolute;bottom: 10px;right:50%;width: 30px;height:<?php echo $asd;?>%;background-color: #4CAF50;text-align: center;color: white;bottom:0px;">
-
-                                          </div>
-                                          </div>
                                           <p style="font-size:20px;">
-                                          {{round($asd,2)}}%
+                                          <?php echo e(round($asd)); ?>%
+                                          </p>
+                                          <p align="center" style="position:relative"><a class="btn btn-default" href="<?php echo e(url('/allresult')); ?>" role="button">Compare Older Results</a>
                                           </p>
 
                                           </div>
@@ -67,5 +52,7 @@
 </div>
 
 
-@endsection
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

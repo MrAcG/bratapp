@@ -43,7 +43,7 @@
                                           </div>
                                           </div>
                                           <p style="font-size:20px;">
-                                          {{$asd}}%
+                                          {{round($asd,2)}}%
                                         </p>
                                             </div>
                                             </center>

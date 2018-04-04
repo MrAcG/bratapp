@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <div class="container">
                           
@@ -19,15 +17,15 @@
                                              
                                               
                                        <div  style="font-size:30px;" class="col-sm-12 animateFadeIUp ">
-                                            @foreach($result as $result)
-                                            {{ $result }}/85
-                                           @endforeach
+                                            <?php $__currentLoopData = $result; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $result): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <?php echo e($result); ?>/85
+                                           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                            <?php $asd=($result/85*100);?>
                                           </div>
                                           <p style="font-size:20px;">
-                                          {{round($asd,2)}}%
+                                          <?php echo e(round($asd)); ?>%
                                           </p>                                        
-                                          <p align="center" style="position:relative"><a class="btn btn-default" href="{{url('/allresult')}}" role="button">Compare Older Results</a>
+                                          <p align="center" style="position:relative"><a class="btn btn-default" href="<?php echo e(url('/allresult')); ?>" role="button">Compare Older Results</a>
                                           </p>
                                           </div>
                                           </div>
@@ -48,5 +46,7 @@
 </div>
 
 
-@endsection
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
