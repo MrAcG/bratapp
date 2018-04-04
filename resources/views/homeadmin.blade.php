@@ -12,7 +12,7 @@
 					<div class="panel-body">
 						<!-- Three columns of Tests -->
 						<div class="row">
-							<div class="col-lg-4">
+							<div class="col-lg-12">
 								<img class="img-circle" src="{{URL::asset('/images/personality-profiling.png')}}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
 								<h3>
 									Manage Students

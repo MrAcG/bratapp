@@ -32,6 +32,9 @@
                     </button>
 
                     <!-- Branding Image -->
+             @if (Auth::guest() || (Auth::user()->admin)=='YES')
+                     <a class="navbar-brand" href="#">Brand The Talent</a>       
+            @else
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                        <a href="#" class="navbar-brand"  data-toggle="dropdown" role="button" aria-expanded="false">
@@ -70,6 +73,7 @@
                       </ul>
                       </li>
                    </ul>
+                @endif
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
