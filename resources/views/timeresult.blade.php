@@ -32,8 +32,13 @@
                                           <p style="font-size:20px;">
                                           {{round($asd,2)}}%
                                           </p>
-                                          <p align="center" style="position:relative"><a class="btn btn-default" href="{{url('/allresult')}}" role="button">Compare Older Results</a>
+                                          <form method="POST" action="/allresult">
+                                           {{ csrf_field() }}
+                                          <p align="center" style="position:relative"><button type="submit" href="/allresult" class="btn btn-primary" name="db" value="timetests">
+                                    Compare With Older Results
+                                </button>
                                           </p>
+                                          </form>
 
                                           </div>
                                           </div>

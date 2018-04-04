@@ -17,7 +17,6 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/chart', 'chartController@index');
-Route::get('/allresult', 'allresultController@index');
 Route::get('/home', 'HomeController@index');
 Route::get('/verbal', 'verbalController@index');
 Route::get('/code', 'codeController@index');
@@ -87,6 +86,7 @@ Route::resource('/hollandsubmit','hollandsubmitController');
 Route::resource('/big5submit','big5submitController');
 Route::resource('/jobs','jobsController');
 Route::resource('/resume','resumeController');
+Route::resource('/allresult', 'allresultController');
 
 Route::get('/feedback/{student_email}', 'feedbackController@feedback');
 Route::post('/feedback', 'feedbackController@feedbackPost');
