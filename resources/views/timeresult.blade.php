@@ -24,9 +24,9 @@
                                            @endforeach
                                            <?php $asd=($result/75*100);?>
                                           </div>
-                              
-                                          <div class="panel panel-default">
                                           <center>
+                                          <div class="panel panel-default">
+                                          
                                             <div class="panel-body">
                                              <div class="row">
                                           <p style="font-size:20px;">

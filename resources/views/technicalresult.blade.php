@@ -25,28 +25,21 @@
                                            <?php $asd=($result/20*100);?>
                                           </div>
                               
-                                          <div class="panel panel-default">
                                           <center>
+                                          <div class="panel panel-default">
+                                          
                                             <div class="panel-body">
                                              <div class="row">
-
-
-                                          <h1 style="font-size:15px;">Result Graph</h1>
-
-                                          <div style="height: 450px;width: 100%;background-color: #ddd;position: relative;"><br>                                    
-                                          <p style="text-align: left;font-size:18px;">100%</p><br><br>
-                                          <p style="text-align: left;font-size:18px;">80%</p><br><br> 
-                                          <p style="text-align: left;font-size:18px;">60%</p><br><br> 
-                                          <p style="text-align: left;font-size:18px;">40%</p><br><br> 
-                                          <p style="text-align: left;font-size:18px;">20%</p><br>         <p style="text-align: left;font-size:18px;">10%</p>
-
-                                        <div id="myBar" style="position:absolute;bottom: 10px;right:50%;width: 30px;height:<?php echo $asd;?>%;background-color: #4CAF50;text-align: center;color: white;bottom:0px;">
-
-                                          </div>
-                                          </div>
                                           <p style="font-size:20px;">
                                           {{round($asd,2)}}%
                                           </p>
+                                          <form method="POST" action="/allresult">
+                                           {{ csrf_field() }}
+                                          <p align="center" style="position:relative"><button type="submit" href="/allresult" class="btn btn-primary" name="db" value="technicaltests">
+                                    Compare With Older Results
+                                </button>
+                                          </p>
+                                          </form>
 
                                           </div>
                                           </div>
