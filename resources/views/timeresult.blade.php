@@ -30,7 +30,7 @@
                                             <div class="panel-body">
                                              <div class="row">
                                           <p style="font-size:20px;">
-                                          {{$asd}}%
+                                          {{round($asd,2)}}%
                                           </p>
                                           <p align="center" style="position:relative"><a class="btn btn-default" href="{{url('/allresult')}}" role="button">Compare Older Results</a>
                                           </p>
