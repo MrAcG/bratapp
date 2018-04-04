@@ -2,7 +2,12 @@
 @section('content')
 
 <div class="container">
-	<canvas id="barChart"></canvas>
+  <canvas id="barChart"></canvas>
+  <center>
+    <br><br>
+    <a class="btn btn-default btn-md" href="/home" role="button"> Home</a>
+    
+  </center>
 </div>
 <script>
   $(document).ready(function(){
