@@ -1,48 +1,66 @@
 @extends('layouts.app')
-
 @section('content')
-<script src="{{ asset('js/canvasjs.min.js') }}"></script>
-  <script type="text/javascript">
 
-    window.onload=function(){
-      var chart=new CanvasJS.Chart("chartContainer",{
-      data: [
-      {
-        type:"column",
-        dataPoints: [
-          <?php     
-          foreach($score as $rows)
-          {
-            echo "{label:'',y:{$rows->score}},";
-          }
-          ?>
-
-        ]
-      }],
-
-    });
-      chart.render();
-      
-    }
-  </script>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <div class="container">
-                          
-                              <h2 class="text-center"><span class="page-heading">Time Management Test Results:</span></h2>
-                                    
-                              <div id="chartContainer" style="width: 90%;height :80%"></div>
-                                          
-                                          </div>
-                                            </div>
-                                            </center>
-                                            </div>
-
-                                   </div>
-
-
-                               </div>
+	<canvas id="barChart"></canvas>
 </div>
+<script>
+  $(document).ready(function(){
+      var ctxB = document.getElementById("barChart").getContext('2d');
+      var myBarChart = new Chart(ctxB, {
+        type: 'bar',
+        data: {
+          labels: ["Test 1", "Test 2", "Test 3", "Test 4", "Test 5"],
+          datasets: [{
+              label: 'Score',
+              <?php 
+              if(count($score)==5){
+                echo("data: [".$score[0].",".$score[1].",".$score[2].",".$score[3].",".$score[4]."],");
+              } elseif (count($score)==4){
+                echo("data: [".$score[0].",".$score[1].",".$score[2].",".$score[3]."],");
+              }
+              elseif (count($score)==3){
+                echo("data: [".$score[0].",".$score[1].",".$score[2]."],");
+              }
+              elseif (count($score)==2){
+                echo("data: [".$score[0].",".$score[1]."],");
+              }
+              elseif (count($score)==1){
+                echo("data: [".$score[0]."],");
+              } else {
+                echo ("No Results");
+              }
 
-
+              ?>
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)'
+              ],
+              borderColor: [
+                  'rgba(255,99,132,1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero:true
+            }
+          }]
+        }
+      }
+    });
+  }); 
+</script>
 @endsection
-
