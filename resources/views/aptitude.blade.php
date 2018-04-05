@@ -8,7 +8,7 @@
 <center>
  <div class="panel panel-primary">
         <div class="panel-heading">
-            <h2 class="panel-title">Aptitute Tests</h2>
+            <h2 class="panel-title">Aptitude Tests</h2>
         </div>
         <div class="panel-body">            
             <div class="row">

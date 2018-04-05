@@ -8,6 +8,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 
+    <link rel="shortcut icon" href="<?php echo e(asset('images/logobtr.png')); ?>">
+
+
     <title>BRATAPP</title>
 
     <!-- Styles -->
@@ -209,5 +212,6 @@
 
           
     </script>
+    
 </body>
 </html>
