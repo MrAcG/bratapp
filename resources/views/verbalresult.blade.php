@@ -32,6 +32,14 @@
                                              <div class="row">
                                           <p style="font-size:20px;">
                                           {{round($asd,2)}}%
+                                          <?php
+                                          if ($asd <= 35)
+                                          {
+                                      
+                                            echo '<br><p style="font-size:20px;color:red;">You failed to clear the test</p>For easy references and learning please refer to <a href="#">indiabix.com</a>';
+                                            echo '<br><b>For quick tips:</b><br><a href="/docs/verbal.pdf" style="text-decoration:underline;font-size:20px;color:blue;">Download this PDF</a><br><a href="/docs/verbal1.pdf" style="text-decoration:underline;font-size:20px;color:blue;">RS Agrawal PDF</a>';
+                                          }
+                                          ?>
                                           </p>
                                           <form method="POST" action="/allresult">
                                            {{ csrf_field() }}

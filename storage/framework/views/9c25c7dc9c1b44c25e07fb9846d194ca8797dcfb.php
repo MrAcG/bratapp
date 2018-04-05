@@ -22,11 +22,22 @@
                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                            <?php $asd=($result/85*100);?>
                                           </div>
+                                          <center>
+                                          <div class="panel panel-default">
+                                            <div class="panel-body">
+                                             <div class="row">
                                           <p style="font-size:20px;">
-                                          <?php echo e(round($asd)); ?>%
-                                          </p>                                        
-                                          <p align="center" style="position:relative"><a class="btn btn-default" href="<?php echo e(url('/allresult')); ?>" role="button">Compare Older Results</a>
+                                          <?php echo e(round($asd,2)); ?>%
                                           </p>
+                                          <form method="POST" action="/allresult">
+                                           <?php echo e(csrf_field()); ?>
+
+                                          <p align="center" style="position:relative"><button type="submit" href="/allresult" class="btn btn-primary" name="db" value="leadertests">
+                                    Compare With Older Results
+                                </button>
+                                          </p>
+                                          </form>
+
                                           </div>
                                           </div>
                                             </div>
