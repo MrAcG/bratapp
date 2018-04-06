@@ -30,9 +30,10 @@
                                 </thead>
                                 <tbody>
                                     @if(count($users)>0)
+                                    {{$count = 0}}
                                     @foreach($users->all() as $user)
                                     <tr>
-                                        <td>{{$user->id}}</td>
+                                        <td>{{++$count}}</td>
                                         <td>{{$user->id}}</td>
                                         <td>{{$user->name}}</td>
                                         <td>{{$user->email}}</td>

@@ -47,7 +47,7 @@
 
                     <!-- Branding Image -->
              <?php if(Auth::guest() || (Auth::user()->admin)=='YES'): ?>
-                     <a class="navbar-brand" href="#">Brand The Talent</a>       
+                     <a class="navbar-brand" href="/home">Brand The Talent</a>       
             <?php else: ?>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
