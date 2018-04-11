@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DateTime;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -42,11 +43,28 @@ class allresultController extends Controller
     {
         $database=$request->db;
          $score = \DB::table($database)
-        ->orderBy('created_at', 'asc')
-        ->take(5)
+        ->orderBy('created_at', 'desc')
+        ->take(5)        
         ->where('email',\Auth::user()->email)
         ->pluck('score');
-        return view('allresult', compact('score'));
+        
+         $date = \DB::table($database)
+        ->orderBy('created_at', 'desc')
+        ->take(5)
+        ->where('email',\Auth::user()->email)
+        ->pluck('created_at');
+        // echo($score);
+        $created = array();
+        for($i=0;$i<count($date);$i++)
+        {
+            $dt = new DateTime($date[$i]);
+            $date_final = $dt->format('m/d/Y');
+            $time = $dt->format('H:i:s');
+            // echo $date_final, ' | ', $time,'<br>';
+            array_push($created,$date_final);
+        }        
+        
+        return view('allresult', compact('score','created'));
         
     
     }
